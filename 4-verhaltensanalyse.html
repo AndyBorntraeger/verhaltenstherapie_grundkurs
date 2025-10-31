@@ -1,0 +1,479 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="de"><head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grundlagen der Verhaltenstherapie: Verhaltensanalyse</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+
+    <style>
+        /* Allgemeine Details/Summary Styles */
+        details summary {
+            background: rgba(0, 0, 0, 0.6);
+            color: white;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            cursor: pointer;
+        }
+
+        /* Hintergrund für den Inhalt ist nun weniger transparent (0.8), um Textlesbarkeit zu gewährleisten */
+        details[open] > *:not(summary) {
+            background: rgba(255, 255, 255, 0.8);
+            color: #1a202c;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            margin-top: 0.5rem;
+        }
+    </style>
+
+    <style>
+        /* HINTERGRUNDBILDER FÜR KACHELN UND DETAILS (Nummerierung 1-5 für die Verhaltensanalyse) */
+        /* NEUE BILDER MIT KORRIGIERTEN DROPBOX-LINKS: 1:Situation, 2:Organismus, 3:Reaktion, 4:Konsequenzen, 5:Allgemein/Analyse */
+        
+        /* 1: SITUATION (A) - Korrigierter Dropbox-Link für direkte Anzeige */
+        .bg-abschnitt-1 { 
+            background: url('https://dl.dropboxusercontent.com/scl/fi/sh451ch0t1fvp7b1hy7yy/siatuation.jpg?rlkey=o08kpde8skezn5f41esuwmba7&raw=1') center/cover no-repeat; 
+        } 
+        
+        /* 2: ORGANISMUS (O) - Korrigierter Dropbox-Link für direkte Anzeige */
+        .bg-abschnitt-2 { 
+            background: url('https://dl.dropboxusercontent.com/scl/fi/1rac3eg5xkjwiz2u4zz69/organismus.jpg?rlkey=yojjndndmzvo6xcb0kv2l0p4p&raw=1') center/cover no-repeat; 
+        }
+        
+        /* 3: REAKTION (R) - Korrigierter Dropbox-Link für direkte Anzeige */
+        .bg-abschnitt-3 { 
+            background: url('https://dl.dropboxusercontent.com/scl/fi/moc9j8xgbo1v7xunuy41z/reaktion.jpg?rlkey=is0tw9f040422h8bez5qocrbr&raw=1') center/cover no-repeat; 
+        }
+        
+        /* 4: KONSEQUENZEN (K) - Korrigierter Dropbox-Link für direkte Anzeige */
+        .bg-abschnitt-4 { 
+            background: url('https://dl.dropboxusercontent.com/scl/fi/v9ff02jbu7jxza1fi1y1n/konsequenzen.jpg?rlkey=sx6gbld64anc2uxnqqjvfj5w7&raw=1') center/cover no-repeat; 
+        }
+        
+        /* 5: ALLGEMEIN / ANALYSE - Korrigierter Dropbox-Link für direkte Anzeige */
+        .bg-abschnitt-5 { 
+            background: url('https://dl.dropboxusercontent.com/scl/fi/ysptjuc9gdcutrcedsxkg/verhaltensanalyse.jpg?rlkey=nazqgrlhjs9kxy6fwm9v9v1oy&raw=1') center/cover no-repeat; 
+        }
+
+
+        details {
+            border-radius: 0.5rem;
+            margin-bottom: 1.5rem;
+            color: white;
+            position: relative;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.06);
+        }
+
+        details summary {
+            background: rgba(0, 0, 0, 0.6);
+            padding: 1rem;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            color: white;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50 text-gray-800 p-4 sm:p-8 leading-relaxed max-w-3xl mx-auto">
+
+    <nav class="fixed top-0 left-0 w-full z-50 bg-white bg-opacity-90 shadow-md">
+        <div class="max-w-7xl mx-auto px-4 py-2 flex justify-center space-x-4 overflow-x-auto text-sm sm:text-base">
+            <a class="text-blue-700 hover:underline whitespace-nowrap" href="#abschnitt-1">1. Grundlagen</a>
+            <a class="text-blue-700 hover:underline whitespace-nowrap" href="#abschnitt-2">2. Situation (S)</a>
+            <a class="text-blue-700 hover:underline whitespace-nowrap" href="#abschnitt-3">3. Organismus (O)</a>
+            <a class="text-blue-700 hover:underline whitespace-nowrap" href="#abschnitt-4">4. Reaktion (R)</a>
+            <a class="text-blue-700 hover:underline whitespace-nowrap" href="#abschnitt-5">5. Konsequenz (K)</a>
+        </div>
+    </nav>
+    <div class="h-16"></div>
+
+    <h1 class="text-3xl font-bold text-blue-700 mb-8">Grundlagen der Verhaltenstherapie: Die Verhaltensanalyse</h1>
+    <h2 class="text-xl font-semibold text-gray-700 mb-8">Das S-O-R-K-Schema: Verhalten verstehen und verändern</h2>
+
+    <section class="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-12 mb-12">
+
+        <a href="#abschnitt-1" class="relative border-4 border-blue-600 rounded-lg shadow hover:shadow-xl transition duration-300 transform hover:scale-105 bg-white overflow-hidden block">
+            <span class="absolute top-2 left-2 bg-blue-600 text-white text-xs px-2 py-1 rounded shadow">Schritt 1 von 5</span>
+            <div class="w-full h-48 bg-abschnitt-1 rounded-t-lg"></div>
+            <div class="absolute inset-0 bg-blue-600 bg-opacity-60 text-white text-sm font-semibold flex items-center justify-center opacity-0 hover:opacity-100 transition">
+                Jetzt starten
+            </div>
+            <div class="p-4">
+                <h3 class="text-lg font-semibold mb-1">Abschnitt 1: Grundlagen der Verhaltensanalyse</h3>
+                <p class="text-sm text-gray-600">Stellung in der Verhaltenstherapie und das S-O-R-K-Schema</p>
+            </div>
+        </a>
+
+        <a href="#abschnitt-2" class="relative border-4 border-blue-600 rounded-lg shadow hover:shadow-xl transition duration-300 transform hover:scale-105 bg-white overflow-hidden block">
+            <span class="absolute top-2 left-2 bg-blue-600 text-white text-xs px-2 py-1 rounded shadow">Schritt 2 von 5</span>
+            <div class="w-full h-48 bg-abschnitt-2 rounded-t-lg"></div>
+            <div class="absolute inset-0 bg-blue-600 bg-opacity-60 text-white text-sm font-semibold flex items-center justify-center opacity-0 hover:opacity-100 transition">
+                Jetzt starten
+            </div>
+            <div class="p-4">
+                <h3 class="text-lg font-semibold mb-1">Abschnitt 2: Die Situations-Variable (S)</h3>
+                <p class="text-sm text-gray-600">Der unmittelbare Auslöser (Wer, Was, Wann, Wo)</p>
+            </div>
+        </a>
+
+        <a href="#abschnitt-3" class="relative border-4 border-blue-600 rounded-lg shadow hover:shadow-xl transition duration-300 transform hover:scale-105 bg-white overflow-hidden block">
+            <span class="absolute top-2 left-2 bg-blue-600 text-white text-xs px-2 py-1 rounded shadow">Schritt 3 von 5</span>
+            <div class="w-full h-48 bg-abschnitt-3 rounded-t-lg"></div>
+            <div class="absolute inset-0 bg-blue-600 bg-opacity-60 text-white text-sm font-semibold flex items-center justify-center opacity-0 hover:opacity-100 transition">
+                Jetzt starten
+            </div>
+            <div class="p-4">
+                <h3 class="text-lg font-semibold mb-1">Abschnitt 3: Die Organismus-Variable (O)</h3>
+                <p class="text-sm text-gray-600">Der innere Filter (Schemata, Vorerfahrungen, Zustand)</p>
+            </div>
+        </a>
+
+        <a href="#abschnitt-4" class="relative border-4 border-blue-600 rounded-lg shadow hover:shadow-xl transition duration-300 transform hover:scale-105 bg-white overflow-hidden block">
+            <span class="absolute top-2 left-2 bg-blue-600 text-white text-xs px-2 py-1 rounded shadow">Schritt 4 von 5</span>
+            <div class="w-full h-48 bg-abschnitt-4 rounded-t-lg"></div>
+            <div class="absolute inset-0 bg-blue-600 bg-opacity-60 text-white text-sm font-semibold flex items-center justify-center opacity-0 hover:opacity-100 transition">
+                Jetzt starten
+            </div>
+            <div class="p-4">
+                <h3 class="text-lg font-semibold mb-1">Abschnitt 4: Die Reaktions-Variable (R)</h3>
+                <p class="text-sm text-gray-600">Das konkrete Verhalten (Emotion, Gedanke, Körper, Verhalten)</p>
+            </div>
+        </a>
+        
+        <a href="#abschnitt-5" class="relative border-4 border-blue-600 rounded-lg shadow hover:shadow-xl transition duration-300 transform hover:scale-105 bg-white overflow-hidden block">
+            <span class="absolute top-2 left-2 bg-blue-600 text-white text-xs px-2 py-1 rounded shadow">Schritt 5 von 5</span>
+            <div class="w-full h-48 bg-abschnitt-5 rounded-t-lg"></div>
+            <div class="absolute inset-0 bg-blue-600 bg-opacity-60 text-white text-sm font-semibold flex items-center justify-center opacity-0 hover:opacity-100 transition">
+                Jetzt starten
+            </div>
+            <div class="p-4">
+                <h3 class="text-lg font-semibold mb-1">Abschnitt 5: Die Konsequenz-Variable (K)</h3>
+                <p class="text-sm text-gray-600">Die Funktion des Verhaltens (Kurz- und Langfristige Folgen)</p>
+            </div>
+        </a>
+            
+    </section>
+    
+    
+</div>
+    <section id="abschnitt-1" class="mb-6">
+        <details class="bg-abschnitt-1 p-6 rounded-xl shadow">
+            <summary>1. Grundlagen der Verhaltensanalyse (Stellung, Einsatz und S-O-R-K)</summary>
+
+            <div class="mt-12 mb-12">
+    <h2 class="text-xl font-bold text-blue-700 mb-4">🎥 Video-Teaser: Eine Einführung - Überblick</h2>
+    
+    <div class="relative rounded-xl shadow-lg border-4 border-blue-600 overflow-hidden **aspect-video**">
+        <video 
+            class="w-full h-full object-cover" 
+            controls 
+            poster="https://www.dropbox.com/scl/fi/6e7c3elxhfmuhenxse8l0/Video.jpg?rlkey=eucv15h9chf21ir4x43ew9ubu&st=3thic0kz&raw=1" 
+        >
+            <source 
+                src="https://www.dropbox.com/scl/fi/81hc76ts9n81b3a578ed1/Verhaltensanalyse.mp4?rlkey=phuwvkq8e250ef8hvfn0qj7sl&st=5wsfphu8&raw=1" 
+                type="video/mp4" 
+            />
+            Ihr Browser unterstützt das Video-Tag nicht.
+        </video>
+    </div>
+            <div class="text-gray-700 text-base leading-snug space-y-4 mt-4">
+                <p>Die <b>Verhaltensanalyse</b> ist das wichtigste Werkzeug in der Verhaltenstherapie. Sie ist ein systematisches Verfahren, um ein Problemverhalten (wie eine Panikattacke, eine starke Vermeidungsreaktion oder ein Konflikt) im Detail zu untersuchen und seine <b>Auslöser</b>, <b>Funktion</b> und <b>Folgen</b> zu verstehen.</p>
+                <p>Sie liefert eine klare <b>"Wenn-Dann-Analyse"</b> (Funktionsanalyse), die nicht nur beschreibt, <i>was</i> passiert ist, sondern auch, <i>warum</i> es passiert ist und <i>welchen Zweck</i> das Verhalten erfüllt. Erst diese Analyse ermöglicht die Planung einer effektiven therapeutischen Intervention.</p>
+                
+                <p><b style="font-size: 1rem; font-family: inherit;">Wann wird die Verhaltensanalyse eingesetzt?</b></p>
+                <ul class="list-disc list-inside ml-4 space-y-2">
+                    <li><b>Zu Beginn der Therapie (Diagnostik):</b> Um ein klares Bild des Problemverhaltens zu bekommen nutzen viele Verhaltenstherapeutinnen die Verhaltensanalyse - entweder explizit, indem man diese mit dem Klienten gemeinsam gestaltet oder implizit, indem die Therpaeutin für sich selbst eine Denkstruktur nach der Verhaltensanalyse aufbaut und dahingehende Fragen stellt.</li>
+                    <li><b>Vor Interventionen:</b> Um die genauen Ansatzpunkte (z. B. nur die Situation, die Gedanken oder die Konsequenzen) für eine Veränderung zu identifizieren.</li>
+                    <li><b>Im Verlauf der Therapie:</b> Um Fortschritte zu überprüfen und zu sehen, ob sich Muster verändert haben.</li>
+                </ul>
+                
+                <p><b style="font-size: 1rem; font-family: inherit;">Die Bausteine des S-O-R-K-Schemas</b></p>
+                <p>Das S-O-R-K-Schema ist das verbreitetste Modell der Verhaltensanalyse. Jeder Buchstabe steht für eine Variable, die das Verhalten beeinflusst:</p>
+                <ul class="list-disc list-inside ml-4 space-y-2">
+                    <li><b>S</b>: <b>Situation</b> (Was war der Auslöser?)</li>
+                    <li><b>O</b>: <b>Organismus</b> (Welche inneren Bedingungen/Vorerfahrungen spielen mit rein?)</li>
+                    <li><b>R</b>: <b>Reaktion</b> (Was genau passiert in dem Moment?)</li>
+                    <li><b>K</b>: <b>Konsequenz</b> (Was folgt unmittelbar und langfristig auf das Verhalten?)</li>
+                    <li>[Zur Vollständigkeit: Häufig wird in der Literatur die S-O-R-K-Analyse auch S-O-R-C-K-Analyse genannt und es wird zusätzlich ein Baustein - die Kontingenz (Wie zuverlässig folgt die Konsequenz auf die Reaktion?) thematisiert. Für unsere Zwecke reicht ein vereinfachtes Modell dieser Analyse, weshalb wir in diesem Zusammenhang immer die (eingedeutschte) Version der Verhaltensanalyse - die S-O-R-K Analyse nutzen möchten.]</li>
+                </ul>
+            </div>
+
+            <div class="bg-blue-50 border-l-4 border-blue-400 p-4 rounded shadow-sm text-sm text-blue-900 mt-4">
+                <p class="font-semibold mb-1">✅ Das Wichtigste auf einen Blick:</p>
+                <ul class="list-disc list-inside space-y-0.5">
+                    <li>Die <b>Verhaltensanalyse</b> (meist mit dem S-O-R-K-Schema) ist die Basis jeder Verhaltenstherapie.</li>
+                    <li>Sie identifiziert <b>Auslöser, innere Bedingungen und Konsequenzen</b> eines Problemverhaltens.</li>
+                    <li>Ziel ist es, das Problemverhalten nicht nur in seiner <b>Funktion</b> zu verstehen sondern <b>gezielte Lösungsansätze</b> zu identifizieren.</li>
+                </ul>
+            </div>
+        </details>
+    </section>
+    
+    <section id="abschnitt-2" class="mb-6">
+        <details class="bg-abschnitt-2 p-6 rounded-xl shadow">
+            <summary>2. Die Situations-Variable (S)</summary>
+
+            <div class="text-gray-700 text-base leading-snug space-y-4 mt-4">
+                <p>Die <b>Situation (S)</b> beschreibt den unmittelbaren <b>Auslöser</b> oder die Gegebenheiten, die dem Problemverhalten unmittelbar vorausgehen. Sie umfasst alle relevanten äußeren und inneren Reize, die das Verhalten starten.</p>
+                
+                <p><b style="font-size: 1rem; font-family: inherit;">Wichtige Aspekte der Situations-Variable:</b></p>
+                <ul class="list-disc list-inside ml-4 space-y-2">
+                    <li><b>Äußere Reize:</b> Wo, wann, mit wem passiert es? (Ort, Zeit, Anwesenheit von Personen, Gerüche, Geräusche).</li>
+                    <li><b>Interne Reize:</b> Vorangehende Gedanken oder körperliche Empfindungen, die bereits ein Signal sein können (z. B. leichte Unruhe, ein spezieller Gedanke).</li>
+                    <li><b>Konkretheit:</b> Die Situation muss so genau wie möglich beschrieben werden, um Wiederholungen messbar zu machen.</li>
+                </ul>
+
+                <p><b style="font-size: 1rem; font-family: inherit;">Anleitung: So füllen Sie die Situations-Variable (S) aus</b></p>
+                <p>Denken Sie an eine konkrete Situation, in der das Problemverhalten auftrat, und beantworten Sie diese Fragen so objektiv wie möglich:</p>
+                <ul class="list-disc list-inside ml-4 space-y-2">
+                    <li><b>Wo war ich?</b> (z. B. In der Küche, im Büro, in der vollen Straßenbahn)</li>
+                    <li><b>Wann war es?</b> (Datum und genaue Uhrzeit, Wochentag)</li>
+                    <li><b>Wer war dabei?</b> (z. B. Mein Partner, Chef, allein zu Hause, ein Fremder)</li>
+                    <li><b>Was war das *unmittelbare* Signal?</b> (z. B. Der Chef sagte: "Wir müssen reden.", Ich sah die volle Straßenbahn auf mich zukommen, Mein Handy klingelte.)</li>
+                </ul>
+                <p><b>Beispiel:</b> "Ich war allein zu Hause (Ort) um 20:00 Uhr (Zeit), als ich im Fernsehen einen Beitrag über einen Unfall sah (unmittelbares Signal)."</p>
+            </div>
+
+            <div class="bg-blue-50 border-l-4 border-blue-400 p-4 rounded shadow-sm text-sm text-blue-900 mt-4">
+                <p class="font-semibold mb-1">✅ Das Wichtigste auf einen Blick:</p>
+                <ul class="list-disc list-inside space-y-0.5">
+                    <li>Die Situation (S) ist der <b>konkrete Auslöser</b> und der Kontext, der dem Verhalten vorausgeht.</li>
+                    <li>Sie muss <b>objektiv und detailliert</b> beschrieben werden (Wer, Was, Wann, Wo).</li>
+                    <li>Die Situationsanalyse hilft, <b>Risikosituationen</b> zu erkennen, die man entweder verändern oder gezielt trainieren muss.</li>
+                </ul>
+            </div>
+            
+            <div class="mt-6 border-t pt-4 border-gray-200">
+                <h4 class="text-lg font-semibold mb-3 text-blue-700">▶️ Arbeitsblatt 12: Situations-Variable (S) (PDF)</h4>
+                <div class="w-full" style="height: 500px;">
+                    <iframe 
+                        src="https://www.dropbox.com/scl/fi/bgrr436s7258o75c4251x/Arbeitsblatt_12_Verhaltensanalyse_S.pdf?rlkey=tdtlttlznan1o10ij6hppybif&st=q5qyrvdv&raw=1" 
+                        width="100%" 
+                        height="100%" 
+                        frameborder="0" 
+                        allowfullscreen="" 
+                        title="Arbeitsblatt 12 Vorschau"
+                        class="rounded-lg shadow-md"
+                        style="border: 1px solid #ccc;"
+                    >
+                        <p class="text-sm text-gray-500 p-4">Ihr Browser unterstützt iFrames nicht oder das Einbetten ist blockiert. 
+                            <a href="https://www.dropbox.com/scl/fi/bgrr436s7258o75c4251x/Arbeitsblatt_12_Verhaltensanalyse_S.pdf?rlkey=tdtlttlznan1o10ij6hppybif&st=q5qyrvdv&dl=0" target="_blank" class="text-blue-500 hover:underline">Hier PDF direkt öffnen oder herunterladen.</a>
+                        </p>
+                    </iframe>
+                </div>
+            </div>
+            
+        </details>
+    </section>
+
+    <section id="abschnitt-3" class="mb-6">
+        <details class="bg-abschnitt-3 p-6 rounded-xl shadow">
+            <summary>3. Die Organismus-Variable (O)</summary>
+
+            <div class="text-gray-700 text-base leading-snug space-y-4 mt-4">
+                <p>Die <b>Organismus-Variable (O)</b> ist der <b>"innere Filter"</b> des Individuums. Sie beschreibt alle stabilen und aktuellen Merkmale (Vorerfahrungen, Überzeugungen, körperliche Verfassung), die das Verhalten in der aktuellen Situation beeinflussen. Sie erklärt, warum nicht jeder Mensch in der gleichen Situation gleich reagiert.</p>
+                
+                <p><b style="font-size: 1rem; font-family: inherit;">Wichtige Aspekte der Organismus-Variable:</b></p>
+                <ul class="list-disc list-inside ml-4 space-y-2">
+                    <li><b>Stabile Merkmale (Überzeugungen/Schemata):</b> Tiefe, oft unbewusste Grundannahmen über sich selbst, andere oder die Welt (z. B. "Ich muss perfekt sein," "Die Welt ist gefährlich").</li>
+                    <li><b>Aktuelle Merkmale (Zustände):</b> Körperliche und psychische Zustände in diesem Moment (z. B. Müdigkeit, Schlafmangel, Hunger, aktuelle Anspannung, hohes Stresslevel).</li>
+                    <li><b>Biologische Faktoren:</b> Anfälligkeiten oder Besonderheiten (z. B. genetische Prädisposition für Stress, Medikamenteneinnahme).</li>
+                </ul>
+
+                <p><b style="font-size: 1rem; font-family: inherit;">Anleitung: So füllen Sie die Organismus-Variable (O) aus</b></p>
+                <p>Überlegen Sie, welche inneren Faktoren in dieser Situation Ihre Reaktion wahrscheinlicher gemacht haben:</p>
+                <ul class="list-disc list-inside ml-4 space-y-2">
+                    <li><b>Aktueller Zustand:</b> War ich müde, hungrig, hatte ich Schmerzen, war ich gerade krank? (z. B. 3 Nächte schlecht geschlafen, starker privater Stress)</li>
+                    <li><b>Bisherige Erfahrung:</b> Gibt es eine ähnliche Vorerfahrung? (z. B. Erst kürzlich einen Job verloren, eine ähnliche Kritik in der Kindheit erhalten)</li>
+                    <li><b>Grundüberzeugungen:</b> Welche innere Regel (Schema) wurde in dieser Situation aktiviert? (z. B. "Wenn ich Fehler mache, werde ich abgelehnt.")</li>
+                </ul>
+                <p><b>Beispiel:</b> "Ich hatte seit drei Nächten wenig geschlafen (aktueller Zustand) und trage die Grundüberzeugung: 'Ich darf keine Schwäche zeigen' (stabiles Merkmal)."</p>
+            </div>
+
+            <div class="bg-blue-50 border-l-4 border-blue-400 p-4 rounded shadow-sm text-sm text-blue-900 mt-4">
+                <p class="font-semibold mb-1">✅ Das Wichtigste auf einen Blick:</p>
+                <ul class="list-disc list-inside space-y-0.5">
+                    <li>Die Organismus-Variable (O) ist der <b>individuelle Filter</b> (Vorerfahrungen, Schemata, aktuelle Zustände).</li>
+                    <li>Sie erklärt die <b>Anfälligkeit</b> für bestimmte Reaktionen in der Situation (S).</li>
+                    <li>In der Therapie zielt sie auf das Verändern von <b>dysfunktionalen Grundüberzeugungen</b> ab.</li>
+                </ul>
+            </div>
+            
+            <div class="mt-6 border-t pt-4 border-gray-200">
+                <h4 class="text-lg font-semibold mb-3 text-blue-700">▶️ Arbeitsblatt 13: Organismus-Variable (O) (PDF)</h4>
+                <div class="w-full" style="height: 500px;">
+                    <iframe 
+                        src="https://www.dropbox.com/scl/fi/5b2imz6zfxehmd5sjdlhf/Arbeitsblatt_13_Verhaltensanalyse_O.pdf?rlkey=hcsb1wslpkaku62zry5t9dred&st=q73z4gfk&raw=1" 
+                        width="100%" 
+                        height="100%" 
+                        frameborder="0" 
+                        allowfullscreen="" 
+                        title="Arbeitsblatt 13 Vorschau"
+                        class="rounded-lg shadow-md"
+                        style="border: 1px solid #ccc;"
+                    >
+                        <p class="text-sm text-gray-500 p-4">Ihr Browser unterstützt iFrames nicht oder das Einbetten ist blockiert. 
+                            <a href="https://www.dropbox.com/scl/fi/5b2imz6zfxehmd5sjdlhf/Arbeitsblatt_13_Verhaltensanalyse_O.pdf?rlkey=hcsb1wslpkaku62zry5t9dred&st=q73z4gfk&dl=0" target="_blank" class="text-blue-500 hover:underline">Hier PDF direkt öffnen oder herunterladen.</a>
+                        </p>
+                    </iframe>
+                </div>
+            </div>
+            
+        </details>
+    </section>
+
+    <section id="abschnitt-4" class="mb-6">
+        <details class="bg-abschnitt-4 p-6 rounded-xl shadow">
+            <summary>4. Die Reaktions-Variable (R) (Emotion, Gedanken, Körper, Verhalten)</summary>
+
+            <div class="text-gray-700 text-base leading-snug space-y-4 mt-4">
+                <p>Die <b>Reaktion (R)</b> ist das <b>tatsächliche Verhalten</b> in der Situation (S), beeinflusst durch die Organismus-Variable (O). Sie wird in der Verhaltenstherapie in vier Ebenen unterteilt, da eine vollständige Reaktion immer mehrere Komponenten umfasst.</p>
+                
+                <p><b style="font-size: 1rem; font-family: inherit;">Die vier Ebenen der Reaktion (R):</b></p>
+                <ul class="list-disc list-inside ml-4 space-y-2">
+                    <li><b>Emotion (Gefühlsebene):</b> Was fühle ich in dem Moment? (z. B. Angst (Stärke 90%), Wut, Scham, Traurigkeit).</li>
+                    <li><b>Gedanken (Kognitive Ebene):</b> Welche spontanen Gedanken gehen mir durch den Kopf? (z. B. "Ich schaffe das nicht!", "Alle starren mich an.", "Ich werde sterben.").</li>
+                    <li><b>Körper (Physiologische Ebene):</b> Was passiert im Körper? (z. B. Herzrasen, Schwitzen, flache Atmung, Muskelanspannung, Schwindel).</li>
+                    <li><b>Verhalten (Motorische Ebene):</b> Was tue ich nach außen hin? (z. B. Flucht, Vermeidung, Schreien, aggressives Verhalten, Rückzug, Beruhigungsversuche).</li>
+                </ul>
+
+                <p><b style="font-size: 1rem; font-family: inherit;">Anleitung: So füllen Sie die Reaktions-Variable (R) aus</b></p>
+                <p>Beschreiben Sie diese vier Ebenen <b>genau in der zeitlichen Abfolge</b>, in der sie aufgetreten sind:</p>
+                <ul class="list-disc list-inside ml-4 space-y-2">
+                    <li><b>Emotion:</b> Angst (9/10), Scham (5/10).</li>
+                    <li><b>Gedanken:</b> "Das geht schief.", "Ich muss hier weg.", "Ich bin peinlich."</li>
+                    <li><b>Körper:</b> Herz klopft stark, Schweißausbrüche an den Händen, starker Druck in der Brust.</li>
+                    <li><b>Verhalten:</b> Ich bin aufgestanden, habe mich entschuldigt und bin aus dem Raum gegangen (Vermeidung).</li>
+                </ul>
+                <p><b>Beispiel:</b> "Ich fühlte <b>Angst</b> (90%) und dachte: '<b>Ich muss hier weg!</b>' Mein <b>Herz raste</b> und ich <b>verließ den Raum</b> so schnell ich konnte."</p>
+            </div>
+
+            <div class="bg-blue-50 border-l-4 border-blue-400 p-4 rounded shadow-sm text-sm text-blue-900 mt-4">
+                <p class="font-semibold mb-1">✅ Das Wichtigste auf einen Blick:</p>
+                <ul class="list-disc list-inside space-y-0.5">
+                    <li>Die Reaktion (R) beschreibt das Problemverhalten in seinen vier Komponenten: <b>Gefühl, Gedanke, Körper, Verhalten</b>.</li>
+                    <li>Sie muss <b>detailliert</b> beschrieben werden, um später Ansatzpunkte für kognitive oder verhaltensbezogene Veränderungen zu bieten.</li>
+                    <li>Das <b>Verhalten</b> ist oft eine <b>Vermeidungsreaktion</b>, die kurzfristig hilft, aber das Problem langfristig aufrechterhält.</li>
+                </ul>
+            </div>
+            
+            <div class="mt-6 border-t pt-4 border-gray-200">
+                <h4 class="text-lg font-semibold mb-3 text-blue-700">▶️ Arbeitsblatt 14: Reaktions-Variable (R) (PDF)</h4>
+                <div class="w-full" style="height: 500px;">
+                    <iframe 
+                        src="https://www.dropbox.com/scl/fi/s5zhwxry6zhegfhkmvx49/Arbeitsblatt_14_Verhaltensanalyse_R.pdf?rlkey=vy68fj1774vwlu5upgjbxy7fr&st=znlnrd7y&raw=1" 
+                        width="100%" 
+                        height="100%" 
+                        frameborder="0" 
+                        allowfullscreen="" 
+                        title="Arbeitsblatt 14 Vorschau"
+                        class="rounded-lg shadow-md"
+                        style="border: 1px solid #ccc;"
+                    >
+                        <p class="text-sm text-gray-500 p-4">Ihr Browser unterstützt iFrames nicht oder das Einbetten ist blockiert. 
+                            <a href="https://www.dropbox.com/scl/fi/s5zhwxry6zhegfhkmvx49/Arbeitsblatt_14_Verhaltensanalyse_R.pdf?rlkey=vy68fj1774vwlu5upgjbxy7fr&st=znlnrd7y&dl=0" target="_blank" class="text-blue-500 hover:underline">Hier PDF direkt öffnen oder herunterladen.</a>
+                        </p>
+                    </iframe>
+                </div>
+            </div>
+            
+        </details>
+    </section>
+
+    <section id="abschnitt-5" class="mb-6">
+        <details class="bg-abschnitt-5 p-6 rounded-xl shadow">
+            <summary>5. Die Konsequenz-Variable (K) (Kurz- und Langfristige Konsequenzen)</summary>
+
+            <div class="text-gray-700 text-base leading-snug space-y-4 mt-4">
+                <p>Die <b>Konsequenz (K)</b> beschreibt die <b>Folgen</b> des Verhaltens (R). Sie ist der Schlüssel zum Verständnis, warum ein Problemverhalten beibehalten wird – es muss eine Funktion erfüllen, meistens durch eine kurzfristige "Belohnung". Einnern Sie sich in diesem Zusammenhang an das Kapitel zu den Lernmechanismen. Um die Auswirkungen des Verhaltens zu verstehen, sind die Grundlagen dazu unerlässlich.</p>
+                
+                <p><b style="font-size: 1rem; font-family: inherit;">Unterscheidung: Kurz- und Langfristige Konsequenzen</b></p>
+                <ul class="list-disc list-inside ml-4 space-y-2">
+                    <li><b>Kurzfristige Konsequenzen:</b> Treten sofort oder sehr schnell nach dem Verhalten auf. Sie sind oft <b>positiv (Belohnung)</b> oder führen zu einer <b>negativen Verstärkung</b> (Wegfall von etwas Unangenehmem) und <b>stabilisieren</b> das Verhalten (z. B. sofortige Erleichterung nach der Flucht).</li>
+                    <li><b>Langfristige Konsequenzen:</b> Treten verzögert auf und sind häufig <b>negativ</b>, da sie das eigentliche Problem aufrechterhalten (z. B. soziale Isolation, Verlust von Selbstvertrauen, chronische Angst).</li>
+                </ul>
+                <p>Besonders die <b>Negative Verstärkung</b> bei Vermeidungsverhalten ist therapeutisch relevant, da sie kurzfristige Erleichterung (Wegfall der Angst) verschafft, aber langfristig zur Chronifizierung der Angst führt.</p>
+
+                <p><b style="font-size: 1rem; font-family: inherit;">Anleitung: So füllen Sie die Konsequenz-Variable (K) aus</b></p>
+                <p>Fragen Sie sich: Was ist passiert, <b>unmittelbar nachdem ich das Verhalten gezeigt habe</b> (R)? Und was ist die Folge in den nächsten Stunden/Tagen?</p>
+                <ul class="list-disc list-inside ml-4 space-y-2">
+                    <li><b>Kurzfristig (oft verstärkend):</b>
+                        <ul class="list-circle list-inside ml-4 space-y-1">
+                            <li><b>Neg. Verstärkung:</b> Die Anspannung/Angst ist sofort verschwunden. (Das Verhalten ist "belohnt" worden).</li>
+                            <li><b>Pos. Verstärkung:</b> Mein Partner hat mich getröstet. Ich habe eine Tafel Schokolade gegessen (angenehmer Reiz kommt hinzu).</li>
+                        </ul>
+                    </li>
+                    <li><b>Langfristig (oft aufrechterhaltend):</b>
+                        <ul class="list-circle list-inside ml-4 space-y-1">
+                            <li>Ich habe die wichtige Aufgabe nicht erledigt. Ich fühle mich enttäuscht von mir selbst. Die Angst vor der Situation wird beim nächsten Mal stärker sein.</li>
+                        </ul>
+                    </li>
+                </ul>
+                <p><b>Beispiel:</b> "Kurzfristig fühlte ich mich sofort <b>erleichtert</b> (Negative Verstärkung). Langfristig musste ich meinem Chef erklären, warum ich gegangen bin, was zu <b>Scham</b> und <b>Stress</b> führte."</p>
+            </div>
+
+            <div class="bg-blue-50 border-l-4 border-blue-400 p-4 rounded shadow-sm text-sm text-blue-900 mt-4">
+                <p class="font-semibold mb-1">✅ Das Wichtigste auf einen Blick:</p>
+                <ul class="list-disc list-inside space-y-0.5">
+                    <li>Konsequenzen (K) erklären die <b>Funktion</b> des Verhaltens und warum es <b>aufrechterhalten</b> wird.</li>
+                    <li>Die <b>kurzfristige Erleichterung</b> (Negative Verstärkung) ist der stärkste Mechanismus bei Angst- und Vermeidungsverhalten.</li>
+                    <li>Therapeutisches Ziel ist es, die kurzfristigen verstärkenden Konsequenzen zu durchbrechen und <b>langfristig konstruktive Konsequenzen</b> zu erleben.</li>
+                </ul>
+            </div>
+            
+            <div class="mt-6 border-t pt-4 border-gray-200">
+                <h4 class="text-lg font-semibold mb-3 text-blue-700">▶️ Arbeitsblatt 15: Konsequenz-Variable (K) (PDF)</h4>
+                <div class="w-full" style="height: 500px;">
+                    <iframe 
+                        src="https://www.dropbox.com/scl/fi/6ic9enbtadt5n4v3ahimt/Arbeitsblatt_15_Verhaltensanalyse_K.pdf?rlkey=znlrj5tk8zdena67o4dnfkiio&st=bghx7bjv&raw=1" 
+                        width="100%" 
+                        height="100%" 
+                        frameborder="0" 
+                        allowfullscreen="" 
+                        title="Arbeitsblatt 15 Vorschau"
+                        class="rounded-lg shadow-md"
+                        style="border: 1px solid #ccc;"
+                    >
+                        <p class="text-sm text-gray-500 p-4">Ihr Browser unterstützt iFrames nicht oder das Einbetten ist blockiert. 
+                            <a href="https://www.dropbox.com/scl/fi/6ic9enbtadt5n4v3ahimt/Arbeitsblatt_15_Verhaltensanalyse_K.pdf?rlkey=znlrj5tk8zdena67o4dnfkiio&st=bghx7bjv&dl=0" target="_blank" class="text-blue-500 hover:underline">Hier PDF direkt öffnen oder herunterladen.</a>
+                        </p>
+                    </iframe>
+                </div>
+            </div>
+            
+        </details>
+    </section>
+
+    
+    
+      <div class="bg-green-50 border-l-4 border-green-400 p-6 rounded-xl shadow mb-12">
+    <h2 class="text-xl font-semibold text-green-700 mb-2">Die Lerngrundlagen</h2>
+    <p class="text-gray-700 mb-4">
+        Die Verhaltensanalyse sitzt, perfekt! Weiter geht es mit dem nächsten Kapitel.
+    </p>
+    
+    <div class="flex justify-end space-x-4">
+        
+        <a href="3-lernkapitel.html" class="inline-block bg-gray-500 hover:bg-gray-600 text-white font-semibold px-6 py-3 rounded-lg shadow transition duration-300 flex items-center">
+            &larr; Zurück zum Lernkapitel
+        </a>
+
+        <a href="5-act.html" class="inline-block bg-green-600 hover:bg-green-700 text-white font-semibold px-6 py-3 rounded-lg shadow transition duration-300">
+            ➔ Jetzt weiter mit dem ACT-Kapitel
+        </a>
+    </div>
+</div>
+<footer class="mt-16 py-8 bg-gray-100 border-t border-gray-200">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-center space-x-8">
+        
+        <a href="impressum.html" 
+           class="text-sm font-medium text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out underline">
+            Impressum
+        </a>
+
+        <a href="datenschutz.html" 
+           class="text-sm font-medium text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out underline">
+            Datenschutzerklärung
+        </a>
+
+    </div>
+</footer>
+</body></html>

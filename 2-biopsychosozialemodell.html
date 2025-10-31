@@ -1,0 +1,324 @@
+
+
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="de"><head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Übersicht über den Kurs</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+
+<style>
+    /* Allgemeine Details/Summary Styles */
+    details summary {
+        background: rgba(0, 0, 0, 0.6);
+        color: white;
+        padding: 1rem;
+        border-radius: 0.5rem;
+        cursor: pointer;
+    }
+
+    /* Hintergrund für den Inhalt ist nun weniger transparent, um Textlesbarkeit zu gewährleisten */
+    /* FIX: CSS-Selektor (&amp;gt; zu >) und Transparenz (0.8 zu 0.95) korrigiert */
+    details[open] > *:not(summary) {
+        background: rgba(255, 255, 255, 0.95);
+        color: #1a202c;
+        padding: 1rem;
+        border-radius: 0.5rem;
+        margin-top: 0.5rem;
+    }
+</style>
+
+    <style>
+        /* HINTERGRUNDBILDER FÜR KACHELN UND DETAILS */
+        /* FIX: "&amp;amp;amp;" durch "&amp;amp;" ersetzt, damit der CSS-Parser die URL korrekt erkennt */
+        .bg-abschnitt-1 { background: url('https://www.dropbox.com/scl/fi/5la0c1mp9dgsjf1hdlfwa/komplexitaet.jpg?rlkey=g0kqv8b4k3gacsj0xl3noty0w&st=7u13inf4&raw=1') center/cover no-repeat; }
+        .bg-abschnitt-2 { background: url('https://www.dropbox.com/scl/fi/rehgpj5c8cpcpbclp0f4k/gene.jpg?rlkey=iffhluyruhosrq26bmf7rt0qi&st=7awvra0v&raw=1') center/cover no-repeat; }
+        .bg-abschnitt-3 { background: url('https://www.dropbox.com/scl/fi/x5clazhjy71t21neur9ah/psyche.jpg?rlkey=0wieai4mhfueap3krlipifgnr&st=1pqvwhte&raw=1') center/cover no-repeat; }
+        .bg-abschnitt-4 { background: url('https://www.dropbox.com/scl/fi/debw7h77g51k6bvsmdyjq/sozial.jpg?rlkey=oj4nwqjla01vowdrcreuk5jca&st=fv0rnl06&raw=1') center/cover no-repeat; }
+        .bg-abschnitt-5 { background: url('https://www.dropbox.com/scl/fi/u20ftxx4hgh5niq9a4prc/wachstum.jpg?rlkey=bqx137arjy97guxdmokqwfx1k&amp;amp;raw=1') center/cover no-repeat; }
+
+        details {
+            border-radius: 0.5rem;
+            margin-bottom: 1.5rem;
+            color: white;
+            position: relative;
+            /* Zusätzlicher Schatten und Rand, um Details von der Seite abzuheben, da Sektion keinen Hintergrund mehr hat */
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.06);
+        }
+
+        details summary {
+            background: rgba(0, 0, 0, 0.6);
+            padding: 1rem;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            color: white;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50 text-gray-800 p-4 sm:p-8 leading-relaxed max-w-3xl mx-auto">
+
+    <nav class="fixed top-0 left-0 w-full z-50 bg-white bg-opacity-90 shadow-md">
+        <div class="max-w-7xl mx-auto px-4 py-2 flex justify-center space-x-4 overflow-x-auto text-sm sm:text-base">
+            <a class="text-blue-700 hover:underline whitespace-nowrap" href="#abschnitt-1">Bio-Psycho-Soziale Modell</a>
+            <a class="text-blue-700 hover:underline whitespace-nowrap" href="#abschnitt-2">Biologische Komponente</a>
+            <a class="text-blue-700 hover:underline whitespace-nowrap" href="#abschnitt-3">Psychologische Komponente</a>
+            <a class="text-blue-700 hover:underline whitespace-nowrap" href="#abschnitt-4">Soziale Komponente</a>
+            
+        </div>
+    </nav>
+    <div class="h-16"></div>
+
+    <h1 class="text-3xl font-bold text-blue-700 mb-8">Grundlagen der Verhaltenstherapie: Das Bio-Psycho-Soziale Bedingungsmodell</h1>
+
+    <section class="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-12 mb-12">
+
+        <a href="#abschnitt-1" class="relative border-4 border-blue-600 rounded-lg shadow hover:shadow-xl transition duration-300 transform hover:scale-105 bg-white overflow-hidden block">
+            <span class="absolute top-2 left-2 bg-blue-600 text-white text-xs px-2 py-1 rounded shadow">Schritt 1 von 4</span>
+            <div class="w-full h-48 bg-abschnitt-1 rounded-t-lg"></div>
+            <div class="absolute inset-0 bg-blue-600 bg-opacity-60 text-white text-sm font-semibold flex items-center justify-center opacity-0 hover:opacity-100 transition">
+                Jetzt starten
+            </div>
+            <div class="p-4">
+                <h3 class="text-lg font-semibold mb-1">Abschnitt 1: Das Bio-Psycho-Soziale Modell</h3>
+                <p class="text-sm text-gray-600">Wie lassen sich psychische Erkrankungen in einem übergeordneten Rahmen erklären?</p>
+            </div>
+        </a>
+
+        <a href="#abschnitt-2" class="relative border-4 border-blue-600 rounded-lg shadow hover:shadow-xl transition duration-300 transform hover:scale-105 bg-white overflow-hidden block">
+            <span class="absolute top-2 left-2 bg-blue-600 text-white text-xs px-2 py-1 rounded shadow">Schritt 2 von 4</span>
+            <div class="w-full h-48 bg-abschnitt-2 rounded-t-lg"></div>
+            <div class="absolute inset-0 bg-blue-600 bg-opacity-60 text-white text-sm font-semibold flex items-center justify-center opacity-0 hover:opacity-100 transition">
+                Jetzt starten
+            </div>
+            <div class="p-4">
+                <h3 class="text-lg font-semibold mb-1">Abschnitt 2: Die biologische Komponente</h3>
+                <p class="text-sm text-gray-600">Welchen Einfluss haben unsere Gene?</p>
+            </div>
+        </a>
+
+        <a href="#abschnitt-3" class="relative border-4 border-blue-600 rounded-lg shadow hover:shadow-xl transition duration-300 transform hover:scale-105 bg-white overflow-hidden block">
+            <span class="absolute top-2 left-2 bg-blue-600 text-white text-xs px-2 py-1 rounded shadow">Schritt 3 von 4</span>
+            <div class="w-full h-48 bg-abschnitt-3 rounded-t-lg"></div>
+            <div class="absolute inset-0 bg-blue-600 bg-opacity-60 text-white text-sm font-semibold flex items-center justify-center opacity-0 hover:opacity-100 transition">
+                Jetzt starten
+            </div>
+            <div class="p-4">
+                <h3 class="text-lg font-semibold mb-1">Abschnitt 3: Die psychologische Komponente</h3>
+                <p class="text-sm text-gray-600">Welchen Einfluss haben psychologische Faktoren?</p>
+            </div>
+        </a>
+
+        <a href="#abschnitt-4" class="relative border-4 border-blue-600 rounded-lg shadow hover:shadow-xl transition duration-300 transform hover:scale-105 bg-white overflow-hidden block">
+            <span class="absolute top-2 left-2 bg-blue-600 text-white text-xs px-2 py-1 rounded shadow">Schritt 4 von 4</span>
+            <div class="w-full h-48 bg-abschnitt-4 rounded-t-lg"></div>
+            <div class="absolute inset-0 bg-blue-600 bg-opacity-60 text-white text-sm font-semibold flex items-center justify-center opacity-0 hover:opacity-100 transition">
+                Jetzt starten
+            </div>
+            <div class="p-4">
+                <h3 class="text-lg font-semibold mb-1">Abschnitt 4: Die Soziale Komponente</h3>
+                <p class="text-sm text-gray-600">Wie wirkt sich unsere soziale Umgebung auf die Entwicklung psychischer Probleme aus?</p>
+            </div>
+        </a>
+
+        
+    </section>
+
+    <section id="abschnitt-1" class="mb-6">
+        <details class="bg-abschnitt-1 p-6 rounded-xl shadow">
+            <summary>1. Das Bio-Psycho-Soziale Modell </summary>
+
+            <div class="mt-12 mb-12">
+    <h2 class="text-xl font-bold text-blue-700 mb-4">🎥 Video-Teaser: Das Bio-Psycho-Soziale Modell - Überblick</h2>
+    
+    <div class="relative rounded-xl shadow-lg border-4 border-blue-600 overflow-hidden **aspect-video**">
+        <video 
+            class="w-full h-full object-cover" 
+            controls 
+            poster="https://www.dropbox.com/scl/fi/6e7c3elxhfmuhenxse8l0/Video.jpg?rlkey=eucv15h9chf21ir4x43ew9ubu&st=3thic0kz&raw=1" 
+        >
+            <source 
+                src="https://www.dropbox.com/scl/fi/tqg8snm6rbbtp2in3t4br/Biopsychosoziales-Modell.mp4?rlkey=xssd1bf9m8a0lz2q7ccxy5b9k&st=49v2l4uz&&raw=1" 
+                type="video/mp4" 
+            />
+            Ihr Browser unterstützt das Video-Tag nicht.
+        </video>
+    </div>
+</div>
+
+            <div class="text-gray-700 text-base leading-snug space-y-4 mt-4">
+                <p></p><p class="MsoNormal"></p><p>Das <b>Biopsychosoziale Bedingungsmodell (BPS-Modell)</b> ist der <b>umfassende Rahmen</b> in der modernen Psychotherapie, um die Entstehung von Gesundheit und Krankheit ganzheitlich zu verstehen. Es besagt, dass psychische Belastungen nie nur eine einzige Ursache haben, sondern immer das Ergebnis eines <b>dynamischen Zusammenwirkens</b> von drei großen Lebensbereichen sind: <b>Biologie, Psyche und soziales Umfeld.</b></p><p><span style="background-color: rgb(247, 250, 252); font-family: &quot;Segoe UI Emoji&quot;, sans-serif; font-size: 1rem;">➡</span>Ziel ist es, weg von der Vorstellung zu kommen, dass eine psychische Störung entweder <i>nur</i> eine "chemische" (biologische) Störung oder <i>nur</i> ein Problem der Kindheit (psychologisch) ist. Stattdessen wird der Mensch als komplexes System betrachtet, in dem sich alle Faktoren gegenseitig beeinflussen.</p><p></p><p data-start="496" data-end="752">
+
+</p>
+            </div>
+
+            <div class="bg-blue-50 border-l-4 border-blue-400 p-4 rounded shadow-sm text-sm text-blue-900 mt-4">
+                <p class="font-semibold mb-1">✅ Das Wichtigste auf einen Blick:</p>
+                <ul class="list-disc list-inside space-y-0.5">
+                    <li>Das Bio-Psycho-Soziale Bedingungsmodell ist der Rahmen um zu verstehen, wie Gesundheit und Krankheit entstehen.</li>
+                    <li>Im Zentrum steht das dynamische Zusammenspiel von Biologie, Psyche und sozialem Umfeld.</li>
+                    <li>Psychische Erkrankungen sind sehr komplex und lassen sich nicht durch einzelne Faktoren erklären</li>
+                </ul>
+            </div>
+
+          
+
+        </details>
+    </section>
+
+    <section id="abschnitt-2" class="mb-6"> 
+        <details class="bg-abschnitt-2 p-6 rounded-xl shadow">
+            <summary>2. Die biologische Komponente</summary>
+
+            <div class="text-gray-700 text-base leading-snug mt-4 space-y-4">
+                <p></p><p class="MsoNormal">Die biologische Ebene befasst sich mit allem, was im <b>Körper</b> abläuft und unser psychisches Befinden unmittelbar beeinflusst. Sie ist das <b>körperliche Fundament</b> und legt oft die Basis für unsere individuelle <b>Anfälligkeit (Vulnerabilität)</b>, also die Wahrscheinlichkeit, eine psychische Störung zu entwickeln.</p><p class="MsoNormal"><span style="font-family: &quot;Segoe UI Emoji&quot;, sans-serif;">➡</span>Ein wichtiger Faktor ist die <b>genetische Prädisposition</b>, eine vererbbare Empfindlichkeit, die uns von Geburt an mitgegeben wird. Ein Alltagsbeispiel hierfür: Wenn <b>Depressionen</b> oder Angsterkrankungen in Ihrer Familie <b>häufiger vorkommen</b>, kann dies bedeuten, dass Ihr Gehirn unter Stress <b>schneller dazu neigt</b>, weniger Serotonin (ein stimmungsaufhellender Botenstoff) zu produzieren. Dadurch haben Sie eine biologisch bedingte <b>niedrigere Schwelle</b> für die Entwicklung depressiver Symptome, auch wenn die Auslöser (Stressoren) moderat sind.</p><p></p>
+               
+<p></p><p class="MsoNormal"><span style="font-family: &quot;Segoe UI Emoji&quot;, sans-serif; background-color: rgb(247, 250, 252);">➡</span>Im Rahmen der Neurobiologie und der Hormonproduktion können ebenfalls Unterschiede zwischen den Menschen bestehen. Diese Ebene umfasst die gesamte <b>Kommunikation in unserem Nervensystem</b> durch Neurotransmitter und Hormone. Bei <b>chronischem Stress</b> produziert der Körper beispielsweise vermehrt das Stresshormon <b>Cortisol</b>. Wenn dieser hohe Zustand lange anhält, wird das gesamte System <b>überlastet und reaktiver</b>. Das äußert sich dann darin, dass bereits eine <b>kleine Stresssituation</b>, wie eine kritische E-Mail oder ein Klingeln an der Tür, sofort eine <b>überzogene körperliche Angstreaktion</b> – typischerweise mit Herzrasen oder Schwitzen – auslöst.</p>
+
+<p class="MsoNormal"><span style="font-family: &quot;Segoe UI Emoji&quot;, sans-serif; background-color: rgb(247, 250, 252);">➡</span>Die <b>alltägliche Pflege des Körpers</b> und der allgemeine Gesundheitszustand sind essenziell. So können <b>chronischer Schlafmangel</b> oder eine unbehandelte <b>Schilddrüsenfehlfunktion</b> (ein klar körperlicher Faktor) Symptome hervorrufen wie starke <b>Reizbarkeit</b>, <b>Konzentrationsstörungen</b> und <b>Erschöpfung</b>, die psychischen Symptomen sehr ähneln. Diese Faktoren können eine bereits bestehende Depression <b>aufrechterhalten oder verstärken</b>, da sie die biologischen Stressreserven ständig entleeren.</p>
+
+<ul style="margin-top:0cm" type="disc">
+ <li><span style="font-family: &quot;Segoe UI Emoji&quot;, sans-serif; background-color: rgb(247, 250, 252);">➡Der therapeutische Fokus liegt auf biologischen Interventionen, z.B. die Verbesserung der Schlafhygiene, die Integration von Bewegung oder die Abklärung bei der Hausärztin oder der Psychiaterin (Stichwort: Konsiliarbericht). Der Konsiliarbericht wird im Rahmen einer Psychotherapie von einem Konsiliararzt, in der Regel die Hausärztin oder die Psychiaterin, ausgefüllt. Der Konsiliarbericht beinhaltet alle relevanten Informationen, die im Rahmen einer Therapie eine Rolle spielen könnten (z.B. Medikamente, körperliche Erkrankungen, Anamnese). Einen Konsiliarbericht erhalten Sie von Ihrem Hausarzt oder Ihrer Psychiaterin. Sprechen Sie Ihre Ärztin darauf an.</span></li>
+</ul>
+
+            </div>
+             
+
+            <div class="bg-blue-50 border-l-4 border-blue-400 p-4 rounded shadow-sm text-sm text-blue-900 mt-4">
+                <p class="font-semibold mb-1">✅ Das Wichtigste auf einen Blick:</p>
+                <ul class="list-disc list-inside space-y-0.5">
+                    <li>Die biologische Komponente legt die Basis für unsere Anfälligkeit. Diese Anfälligkeit nennt sich Vulnerabilität.</li>
+                    <li>Die genetische Prädisposition ist die vererbbare Anfälligkeit.<ul class="list-disc list-inside space-y-0.5" style="border-color: rgb(229, 231, 235); --tw-shadow: 0 0 #0000; --tw-ring-inset: ; --tw-ring-offset-width: 0px; --tw-ring-offset-color: #fff; --tw-ring-color: rgba(59, 130, 246, 0.5); --tw-ring-offset-shadow: 0 0 #0000; --tw-ring-shadow: 0 0 #0000;"><li class="editable" style="border-color: rgb(229, 231, 235); --tw-shadow: 0 0 #0000; --tw-ring-inset: ; --tw-ring-offset-width: 0px; --tw-ring-offset-color: #fff; --tw-ring-color: rgba(59, 130, 246, 0.5); --tw-ring-offset-shadow: 0 0 #0000; --tw-ring-shadow: 0 0 #0000; margin-top: 2px; margin-bottom: 0px; --tw-space-y-reverse: 0;" contenteditable="true">Es gibt weitere Unterschiede in der Neurobiologie, der Hormone, der körperlichen Gesundheit und des Lebensstils, die gemeinsam die biologische Komponente beeinflussen.</li></ul></li>
+                    <li>Der therapeutische Fokus liegt auf biologischen Interventionen, wie z.B. der Verbesserung der Schlafhygiene, die Integration von Sport und Bewegung oder die Abklärung bei Ihrer Hausärztin</li>
+                </ul>
+            </div>
+
+             <div class="mt-6 border-t pt-4 border-gray-200">
+<h4 class="text-lg font-semibold mb-3 text-blue-700">▶️ Arbeitsblatt 9: BPS-Modell: Die Biologische Ebene (PDF)</h4>
+<div class="w-full bg-white p-4 rounded-lg" style="height: 500px;">
+    <iframe src="https://www.dropbox.com/scl/fi/1aul23kbfpa6paa5bj8z9/Arbeitsblatt_9_BPS_Ebene_Bio.pdf?rlkey=pdh1c7yklqs5p8nsso2swfe4v&amp;st=cga2zseb&amp;raw=1" width="100%" height="100%" frameborder="0" allowfullscreen="" title="Arbeitsblatt 9 Vorschau" class="rounded-lg shadow-md" style="border: 1px solid #ccc;">
+        
+        &lt;p class="text-sm text-gray-500 p-4"&gt;Ihr Browser unterstützt iFrames nicht oder das Einbetten ist blockiert. 
+            &lt;a href="https://www.dropbox.com/scl/fi/1aul23kbfpa6paa5bj8z9/Arbeitsblatt_9_BPS_Ebene_Bio.pdf?rlkey=pdh1c7yklqs5p8nsso2swfe4v&amp;amp;st=cga2zseb&amp;amp;dl=0" target="_blank" class="text-blue-500 hover:underline"&gt;Hier PDF direkt öffnen oder herunterladen.&lt;/a&gt;
+        &lt;/p&gt;
+    </iframe>
+</div>
+            </div>
+            </div>
+
+        </details>
+    </section>
+
+    <section id="abschnitt-3" class="mb-6">
+        <details class="bg-abschnitt-3 p-6 rounded-xl shadow">
+            <summary>3. Die psychologische Komponente </summary>
+
+            <div class="text-gray-700 text-base leading-snug space-y-4 mt-4">
+                <p></p><p class="MsoNormal">Die psychologische Ebene ist der zentrale Ansatzpunkt der Kognitiven Verhaltenstherapie (KVT), da sie alle unsere <b>erlernten Muster</b> des Denkens, Fühlens und Handelns umfasst.</p><p class="MsoNormal">
+</p><p class="MsoNormal"><span style="font-family: &quot;Segoe UI Emoji&quot;, sans-serif; background-color: rgb(247, 250, 252);">➡Kognitive Schemata und sogenannte Grundannahmen bilden die Basis wie wir die Welt und uns selbst wahrnehmen. </span>Diese Ebene befasst sich damit, wie wir die Welt und uns selbst sehen, beziehungsweise welche <b>inneren Überzeugungen</b> wir über uns selbst, andere und die Zukunft gebildet haben. Diese tief verankerten <b>Grundannahmen</b> werden oft durch frühe Lebenserfahrungen entwickelt. Ein Alltagsbeispiel hierfür ist die Grundannahme: <b>"Ich muss immer perfekt sein, sonst werde ich abgelehnt,"</b> die eine starke <b>psychologische Vulnerabilität</b> darstellt. Wenn eine solche Überzeugung existiert, führt jeder noch so kleine Fehler – etwa eine winzige Unachtsamkeit in einem Bericht – zu <b>intensiven Selbstzweifeln</b> und einem tief sitzenden Gefühl des Versagens. Diese negativen, überkritischen <b>Bewertungen</b> sind ein psychischer Faktor, der zur <b>chronischen Überlastung</b> und schließlich zum <b>Burnout</b> beitragen kann.</p><p></p>
+
+                <p></p><p class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;&#10;line-height:normal"><span style="border-color: rgb(229, 231, 235); --tw-shadow: 0 0 #0000; --tw-ring-inset: ; --tw-ring-offset-width: 0px; --tw-ring-offset-color: #fff; --tw-ring-color: rgba(59, 130, 246, 0.5); --tw-ring-offset-shadow: 0 0 #0000; --tw-ring-shadow: 0 0 #0000; font-family: &quot;Segoe UI Emoji&quot;, sans-serif; background-color: rgb(247, 250, 252);">➡Der Umgang mit Gefühlen und Stress bezeichnen wir als emotionale Regulationsfähigkeiten und Bewältigungsstrategien. </span>Dieser Bereich beschreibt, wie wir mit unseren Gefühlen und mit Stress umgehen. Ist die Fähigkeit zur <b>gesunden Emotionsregulation</b> nicht ausreichend ausgebildet, entstehen innere Konflikte und Überlastung. Wenn ein Mensch beispielsweise in seiner Kindheit nicht gelernt hat, mit starken Gefühlen wie Wut oder Trauer umzugehen, neigt er als Erwachsener dazu, diese <b>Gefühle zu unterdrücken</b> (ein typisches <b>Vermeidungsverhalten</b>) oder stattdessen in unkontrollierten Ausbrüchen zu reagieren. Die fehlende Fähigkeit, Emotionen angemessen zu verarbeiten, erhöht somit das Risiko für <b>zwischenmenschliche Konflikte</b> und eine <b>hohe innere Anspannung</b>.</p>
+
+<p class="MsoNormal"><span style="font-family: &quot;Segoe UI Emoji&quot;, sans-serif; background-color: rgb(247, 250, 252);">➡</span>Ebenfalls zur psychologischen Ebene gehört unser <b>Vertrauen in die eigene Handlungsfähigkeit</b> – die sogenannte <b>Selbstwirksamkeitserwartung</b> – und unsere Fähigkeit zur <b>Achtsamkeit</b>. Jemand mit einer geringen Selbstwirksamkeitserwartung neigt dazu, nach einem Rückschlag sofort zu denken: <b>"Das schaffe ich nie"</b> oder <b>"Es hat sowieso keinen Sinn"</b>. Diese innere Haltung führt dazu, dass die Person schnell aufgibt und notwendige Lernprozesse, die zur Lösung des Problems führen könnten, <b>vorzeitig abbricht</b>, wodurch sich die ursprünglichen Probleme verfestigen und die Hilflosigkeit zunimmt.</p>
+
+<p class="MsoNormal"><span style="font-family: &quot;Segoe UI Emoji&quot;, sans-serif; background-color: rgb(247, 250, 252);">➡</span>Der therapeutische Fokus auf dieser Ebene liegt auf der <b>Veränderung der inneren Muster</b>. Hier arbeiten wir mit bewährten Methoden wie der <b>Kognitiven Umstrukturierung</b>, um dysfunktionale Grundannahmen zu hinterfragen, mit <b>Expositionen</b>, um Vermeidungsverhalten abzubauen, sowie mit <b>Emotionsregulationstechniken</b> und <b>Achtsamkeitsübungen</b>, um den Klienten zu lehren, seine inneren Prozesse zu beobachten und konstruktiv zu steuern.</p>
+
+            </div>
+
+            <div class="bg-blue-50 border-l-4 border-blue-400 p-4 rounded shadow-sm text-sm text-blue-900 mt-4">
+                <p class="font-semibold mb-1">✅ Das Wichtigste auf einen Blick:</p>
+                <ul class="list-disc list-inside space-y-0.5">
+                    <li>Kognitive Schemata und Grundannahmen bilden die Basis, wie wir unsere Welt und uns selbst wahrnehmen.</li>
+                    <li>Der Umgang mit Gefühlen und Stress wird als emotionale Regulationsfähigkeit und Stressbewältigung bezeichnet. Wichtige weitere Komponenten sind die Achtsamkeitsfähigkeit und die Selbstwirksamkeit - also die Überzeugung selbst etwas ausrichten zu können.</li>
+                    <li>Der therapeutische Fokus liegt auf der Bearbeitung von zugrundeliegenden Schemata und Grundannahmen, Expositionsübungen, Emotionsregulationstechniken und Achtsamkeitsübungen</li>
+                </ul>
+            </div>
+
+            <div class="mt-6 border-t pt-4 border-gray-200">
+    <h4 class="text-lg font-semibold mb-3 text-blue-700">▶️ Arbeitsblatt 10: BPS-Modell: Die Psychologische Ebene (PDF)</h4>
+    <div class="w-full bg-white p-4 rounded-lg" style="height: 500px;">
+        <iframe src="https://www.dropbox.com/scl/fi/u3upd6w06voah4peg2bhc/Arbeitsblatt_10_BPS_Ebene_Psycho.pdf?rlkey=q8vet0ynhkfnws3fzd6lyxsvw&amp;st=1hhe9cv9&amp;raw=1" width="100%" height="100%" frameborder="0" allowfullscreen="" title="Arbeitsblatt 10 Vorschau" class="rounded-lg shadow-md" style="border: 1px solid #ccc;">
+            
+            &lt;p class="text-sm text-gray-500 p-4"&gt;Ihr Browser unterstützt iFrames nicht oder das Einbetten ist blockiert. 
+                &lt;a href="https://www.dropbox.com/scl/fi/u3upd6w06voah4peg2bhc/Arbeitsblatt_10_BPS_Ebene_Psycho.pdf?rlkey=q8vet0ynhkfnws3fzd6lyxsvw&amp;amp;st=1hhe9cv9&amp;amp;dl=0" target="_blank" class="text-blue-500 hover:underline"&gt;Hier PDF direkt öffnen oder herunterladen.&lt;/a&gt;
+            &lt;/p&gt;
+        </iframe>
+    </div>
+</div>
+
+        </details>
+    </section>
+
+    <section id="abschnitt-4" class="mb-6">
+        <details class="bg-abschnitt-4 p-6 rounded-xl shadow">
+            <summary>4. Die soziale Komponente </summary>
+
+            <div class="text-gray-700 text-base leading-snug space-y-4 mt-4">
+                <p></p><p class="MsoNormal">Die soziale Ebene umfasst die äußere Umwelt und die Qualität unserer Beziehungen. Sie kann sowohl eine <b>Quelle von Stressoren</b> als auch eine <b>Schutzmauer (Resilienzfaktor)</b> sein.</p><p class="MsoNormal"><span style="border-color: rgb(229, 231, 235); --tw-shadow: 0 0 #0000; --tw-ring-inset: ; --tw-ring-offset-width: 0px; --tw-ring-offset-color: #fff; --tw-ring-color: rgba(59, 130, 246, 0.5); --tw-ring-offset-shadow: 0 0 #0000; --tw-ring-shadow: 0 0 #0000; font-family: &quot;Segoe UI Emoji&quot;, sans-serif; background-color: rgb(247, 250, 252);">➡</span>Die <b>Qualität unserer sozialen Verbindungen</b> und das Vorhandensein stabiler Netzwerke spielen eine entscheidende Rolle für unsere psychische Widerstandsfähigkeit. Sie wirken oft wie ein <b>Puffer</b> gegen äußere Schläge des Lebens. Man kann sich dies anhand zweier Personen verdeutlichen, die beide einen starken Stressor erleben, wie den <b>Verlust des Arbeitsplatzes</b>. Person A verfügt über einen <b>stabilen Partner</b> und <b>gute Freunde</b>, die ihr Trost, praktische Hilfe und emotionale Bestätigung bieten – dies wirkt als starker sozialer Puffer. Person B hingegen ist nach einem kürzlichen Umzug <b>isoliert</b> und muss die zusätzliche Belastung als alleinerziehende Person tragen. Die <b>fehlende soziale Unterstützung</b> bei Person B macht sie <b>deutlich vulnerabler</b> für die Entwicklung einer psychischen Störung, wie beispielsweise einer Depression nach dem Jobverlust.</p>
+<p class="MsoNormal"><span style="border-color: rgb(229, 231, 235); --tw-shadow: 0 0 #0000; --tw-ring-inset: ; --tw-ring-offset-width: 0px; --tw-ring-offset-color: #fff; --tw-ring-color: rgba(59, 130, 246, 0.5); --tw-ring-offset-shadow: 0 0 #0000; --tw-ring-shadow: 0 0 #0000; font-family: &quot;Segoe UI Emoji&quot;, sans-serif;">➡</span>Neben plötzlichen, kritischen Ereignissen spielen auch <b>andauernde Belastungen</b>, die sogenannten <b>chronischen Stressoren</b>, eine große Rolle. Ein typisches Beispiel ist ein <b>langanhaltender Familienkonflikt</b>, etwa eine seit Jahren andauernde und konfliktgeladene Scheidungssituation. Dieser soziale Stressor ist nicht nur ein psychisches Problem, sondern wirkt sich direkt auf die <b>biologische Ebene</b> aus, indem er konstant das Stresshormon <b>Cortisol</b> ausschüttet. Gleichzeitig verstärkt er auf der <b>psychologischen Ebene</b> die kognitive Überzeugung: <b>"Ich kann keine Konflikte lösen"</b> oder <b>"Ich bin hilflos"</b>. In solchen Fällen sind <b>alle drei Ebenen</b> des biopsychosozialen Modells unmittelbar miteinander verknüpft und verstärken sich gegenseitig.</p><p></p>
+                
+                <p></p><p class="MsoNormal"><span style="font-family: &quot;Segoe UI Emoji&quot;, sans-serif; background-color: rgb(247, 250, 252);">➡</span>Auch die <b>Erwartungen, Normen und Werte unseres Umfelds</b> beeinflussen unsere psychische Gesundheit. In einer Gesellschaft, in der <b>psychische Probleme stigmatisiert</b> werden, trauen sich betroffene Klienten oft nicht, offen über ihre Ängste, Depressionen oder Panikattacken zu sprechen. Diese Angst vor Verurteilung durch das soziale Umfeld führt zu <b>Isolation</b> und <b>Vermeidungsverhalten</b> (psychologische Ebene). Dies wiederum verunmöglicht Hilfe und entlastende Gespräche, wodurch sich die ursprüngliche Situation des Klienten <b>weiter verschlechtert</b>.</p><p class="MsoNormal"><span style="font-family: &quot;Segoe UI Emoji&quot;, sans-serif; background-color: rgb(247, 250, 252);">➡</span>Auf der sozialen Ebene liegt der <b>therapeutische Fokus</b> auf den sogenannten <b>sozialen Interventionen</b>. Diese zielen darauf ab, die Kompetenzen des Klienten im Umgang mit seinem Umfeld zu stärken und Überlastungen zu reduzieren. Dies beinhaltet beispielsweise das <b>Üben von Kompetenzen</b>, wie eine gesunde <b>Konfliktlösung</b> oder das Erlernen, <b>"Nein-zu-Sagen"</b>. Wichtig ist auch der <b>aktive Aufbau von sozialen Kontakten</b> oder die Reduzierung von Überforderung im familiären oder beruflichen Umfeld, um die soziale Schutzmauer zu stabilisieren und die Anfälligkeit insgesamt zu senken.</p><p class="MsoNormal">
+</p>
+                
+            </div>
+
+            <div class="bg-blue-50 border-l-4 border-blue-400 p-4 rounded shadow-sm text-sm text-blue-900 mt-4">
+                <p class="font-semibold mb-1">✅ Das Wichtigste auf einen Blick:</p>
+                <ul class="list-disc list-inside space-y-0.5">
+                    <li>Die soziale Komponente umfasst die äußere Umwelt und die Qualität unserer Beziehungen. Dies können sowohl Schutzfaktor als auch Anfälligkeitsfaktor für psychische Erkrankungen darstellen.</li>
+                    <li>Sowohl plötzliche Belastungen (z.B. Jobverlust) als auch andauernde Belastungen (z.B. Mobbing) können auslösende Faktoren für psychische Erkrankungen darstellen. Darüber hinaus spielen Normen, Erwartungen und Werte eine zentrale Rolle, wie wir mit psychischen Problemen umgehen.</li>
+                    <li>Der therapeutische Fokus liegt auf sozialen Interventionen, wie z.B. Training von Reaktionen im Streit, "Nein" sagen lernen oder dem Aufbau sozialer Beziehungen.</li>
+                </ul>
+            </div>
+
+            <div class="mt-6 border-t pt-4 border-gray-200">
+    <h4 class="text-lg font-semibold mb-3 text-blue-700">▶️ Arbeitsblatt 11: BPS-Modell: Die Soziale Ebene (PDF)</h4>
+    <div class="w-full bg-white p-4 rounded-lg" style="height: 500px;">
+        <iframe src="https://www.dropbox.com/scl/fi/743t5nc9v9r36dn1ihwf7/Arbeitsblatt_11_BPS_Ebene_Sozial.pdf?rlkey=3195qsnjo3c6c0hb9tpwkc1b4&amp;st=dm7h706w&amp;raw=1" width="100%" height="100%" frameborder="0" allowfullscreen="" title="Arbeitsblatt 11 Vorschau" class="rounded-lg shadow-md" style="border: 1px solid #ccc;">
+            
+            &lt;p class="text-sm text-gray-500 p-4"&gt;Ihr Browser unterstützt iFrames nicht oder das Einbetten ist blockiert. 
+                &lt;a href="https://www.dropbox.com/scl/fi/743t5nc9v9r36dn1ihwf7/Arbeitsblatt_11_BPS_Ebene_Sozial.pdf?rlkey=3195qsnjo3c6c0hb9tpwkc1b4&amp;amp;st=dm7h706w&amp;amp;dl=0" target="_blank" class="text-blue-500 hover:underline"&gt;Hier PDF direkt öffnen oder herunterladen.&lt;/a&gt;
+            &lt;/p&gt;
+        </iframe>
+    </div>
+</div>
+
+        </details>
+    </section>
+
+    
+    
+    <div class="bg-green-50 border-l-4 border-green-400 p-6 rounded-xl shadow mb-12">
+    <h2 class="text-xl font-semibold text-green-700 mb-2">Das Bio-Psycho-Soziale Modell</h2>
+    <p class="text-gray-700 mb-4">
+        Du hast nun ein weiteres Kapitel der Grundlagen kennengelernt. Super! Weiter geht es mit dem nächsten Kapitel.
+    </p>
+    
+    <div class="flex justify-end space-x-4">
+        
+        <a href="index.html" class="inline-block bg-gray-500 hover:bg-gray-600 text-white font-semibold px-6 py-3 rounded-lg shadow transition duration-300 flex items-center">
+            &larr; Zurück zur Einführung
+        </a>
+
+        <a href="3-lernkapitel.html" class="inline-block bg-green-600 hover:bg-green-700 text-white font-semibold px-6 py-3 rounded-lg shadow transition duration-300">
+            ➔ Jetzt weiter mit dem nächsten Kapitel
+        </a>
+    </div>
+</div>
+<footer class="mt-16 py-8 bg-gray-100 border-t border-gray-200">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-center space-x-8">
+        
+        <a href="impressum.html" 
+           class="text-sm font-medium text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out underline">
+            Impressum
+        </a>
+
+        <a href="datenschutz.html" 
+           class="text-sm font-medium text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out underline">
+            Datenschutzerklärung
+        </a>
+
+    </div>
+</footer>
+
+</body>
+</html>

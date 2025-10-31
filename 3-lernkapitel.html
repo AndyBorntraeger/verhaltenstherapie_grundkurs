@@ -1,0 +1,516 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="de"><head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Übersicht über den Kurs</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+
+    <style>
+        /* Allgemeine Details/Summary Styles */
+        details summary {
+            background: rgba(0, 0, 0, 0.6);
+            color: white;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            cursor: pointer;
+        }
+
+        /* Hintergrund für den Inhalt ist nun weniger transparent (0.8), um Textlesbarkeit zu gewährleisten */
+        details[open] > *:not(summary) {
+            background: rgba(255, 255, 255, 0.8);
+            color: #1a202c;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            margin-top: 0.5rem;
+        }
+    </style>
+
+    <style>
+        /* HINTERGRUNDBILDER FÜR KACHELN UND DETAILS */
+        /* FIX: "&amp;" durch "&" ersetzt, damit der CSS-Parser die URL korrekt erkennt */
+        .bg-abschnitt-1 { background: url('https://www.dropbox.com/scl/fi/ykbr4of44an4brlvooo92/KK.jpg?rlkey=rxit568grj1xky707j7jsb02o&st=9haorbo1&raw=1') center/cover no-repeat; }
+        .bg-abschnitt-2 { background: url('https://www.dropbox.com/scl/fi/ma6n2bko6ajebjl6uh5x8/OK.jpg?rlkey=iu3ethbvia7fd2k99o8hye6m3&st=y53ry28j&raw=1') center/cover no-repeat; }
+        .bg-abschnitt-3 { background: url('https://www.dropbox.com/scl/fi/8vdjfpxh4znhq8l1dlrc1/beobachtungslernen.jpg?rlkey=vextqlfa1i6qpsj4cmmz9juzw&st=o67h7sbm&raw=1') center/cover no-repeat; }
+        .bg-abschnitt-4 { background: url('https://www.dropbox.com/scl/fi/ndq6zl5wq3coem0mi4xvh/kognitiv.jpg?rlkey=mrjz2bkbx0x3zqv4hbamr7mem&st=k5xnucrm&raw=1') center/cover no-repeat; }
+        .bg-abschnitt-5 { background: url('https://www.dropbox.com/scl/fi/u20ftxx4hgh5niq9a4prc/wachstum.jpg?rlkey=bqx137arjy97guxdmokqwfx1k&raw=1') center/cover no-repeat; }
+
+        details {
+            border-radius: 0.5rem;
+            margin-bottom: 1.5rem;
+            color: white;
+            position: relative;
+            /* Zusätzlicher Schatten und Rand, um Details von der Seite abzuheben, da Sektion keinen Hintergrund mehr hat */
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.06);
+        }
+
+        details summary {
+            background: rgba(0, 0, 0, 0.6);
+            padding: 1rem;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            color: white;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50 text-gray-800 p-4 sm:p-8 leading-relaxed max-w-3xl mx-auto">
+
+    <nav class="fixed top-0 left-0 w-full z-50 bg-white bg-opacity-90 shadow-md">
+        <div class="max-w-7xl mx-auto px-4 py-2 flex justify-center space-x-4 overflow-x-auto text-sm sm:text-base">
+            <a class="text-blue-700 hover:underline whitespace-nowrap" href="#abschnitt-1">Klassisches Konditionieren</a>
+            <a class="text-blue-700 hover:underline whitespace-nowrap" href="#abschnitt-2">Operante Konditionieren</a>
+            <a class="text-blue-700 hover:underline whitespace-nowrap" href="#abschnitt-3">Beobachtungslernen</a>
+            <a class="text-blue-700 hover:underline whitespace-nowrap" href="#abschnitt-4">Kognitive Lernen</a>
+            
+        </div>
+    </nav>
+    <div class="h-16"></div>
+
+    <h1 class="text-3xl font-bold text-blue-700 mb-8">Grundlagen der Verhaltenstherapie: Lerntheorie</h1>
+
+    <section class="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-12 mb-12">
+
+        <a href="#abschnitt-1" class="relative border-4 border-blue-600 rounded-lg shadow hover:shadow-xl transition duration-300 transform hover:scale-105 bg-white overflow-hidden block">
+            <span class="absolute top-2 left-2 bg-blue-600 text-white text-xs px-2 py-1 rounded shadow">Schritt 1 von 4</span>
+            <div class="w-full h-48 bg-abschnitt-1 rounded-t-lg"></div>
+            <div class="absolute inset-0 bg-blue-600 bg-opacity-60 text-white text-sm font-semibold flex items-center justify-center opacity-0 hover:opacity-100 transition">
+                Jetzt starten
+            </div>
+            <div class="p-4">
+                <h3 class="text-lg font-semibold mb-1">Abschnitt 1: Das Klassische Konditionieren</h3>
+                <p class="text-sm text-gray-600">Was haben Hunde und Verhaltenstherapie gemeinsam?</p>
+            </div>
+        </a>
+
+        <a href="#abschnitt-2" class="relative border-4 border-blue-600 rounded-lg shadow hover:shadow-xl transition duration-300 transform hover:scale-105 bg-white overflow-hidden block">
+            <span class="absolute top-2 left-2 bg-blue-600 text-white text-xs px-2 py-1 rounded shadow">Schritt 2 von 4</span>
+            <div class="w-full h-48 bg-abschnitt-2 rounded-t-lg"></div>
+            <div class="absolute inset-0 bg-blue-600 bg-opacity-60 text-white text-sm font-semibold flex items-center justify-center opacity-0 hover:opacity-100 transition">
+                Jetzt starten
+            </div>
+            <div class="p-4">
+                <h3 class="text-lg font-semibold mb-1">Abschnitt 2: Das Operante Konditionieren</h3>
+                <p class="text-sm text-gray-600">Wie bestimmen Konsequenzen unser Verhalten?</p>
+            </div>
+        </a>
+
+        <a href="#abschnitt-3" class="relative border-4 border-blue-600 rounded-lg shadow hover:shadow-xl transition duration-300 transform hover:scale-105 bg-white overflow-hidden block">
+            <span class="absolute top-2 left-2 bg-blue-600 text-white text-xs px-2 py-1 rounded shadow">Schritt 3 von 4</span>
+            <div class="w-full h-48 bg-abschnitt-3 rounded-t-lg"></div>
+            <div class="absolute inset-0 bg-blue-600 bg-opacity-60 text-white text-sm font-semibold flex items-center justify-center opacity-0 hover:opacity-100 transition">
+                Jetzt starten
+            </div>
+            <div class="p-4">
+                <h3 class="text-lg font-semibold mb-1">Abschnitt 3: Das Beobachtungslernen</h3>
+                <p class="text-sm text-gray-600">Wie Beobachtungen unser Verhalten beeinflussen</p>
+            </div>
+        </a>
+
+        <a href="#abschnitt-4" class="relative border-4 border-blue-600 rounded-lg shadow hover:shadow-xl transition duration-300 transform hover:scale-105 bg-white overflow-hidden block">
+            <span class="absolute top-2 left-2 bg-blue-600 text-white text-xs px-2 py-1 rounded shadow">Schritt 4 von 4</span>
+            <div class="w-full h-48 bg-abschnitt-4 rounded-t-lg"></div>
+            <div class="absolute inset-0 bg-blue-600 bg-opacity-60 text-white text-sm font-semibold flex items-center justify-center opacity-0 hover:opacity-100 transition">
+                Jetzt starten
+            </div>
+            <div class="p-4">
+                <h3 class="text-lg font-semibold mb-1">Abschnitt 4: Das Kognitive Lernen</h3>
+                <p class="text-sm text-gray-600">Lernen mithilfe der eigenen, inneren Realität</p>
+            </div>
+        </a>
+
+        
+    </section>
+
+
+    <section id="abschnitt-1" class="mb-6">
+        <details class="bg-abschnitt-1 p-6 rounded-xl shadow">
+            <summary>1. Das Klassische Konditionieren</summary>
+
+            <div class="mt-12 mb-12">
+    <h2 class="text-xl font-bold text-blue-700 mb-4">🎥 Video-Teaser: Das Klassische Konditionieren - Überblick</h2>
+    
+    <div class="relative rounded-xl shadow-lg border-4 border-blue-600 overflow-hidden **aspect-video**">
+        <video 
+            class="w-full h-full object-cover" 
+            controls 
+            poster="https://www.dropbox.com/scl/fi/6e7c3elxhfmuhenxse8l0/Video.jpg?rlkey=eucv15h9chf21ir4x43ew9ubu&st=3thic0kz&raw=1" 
+        >
+            <source 
+                src="https://www.dropbox.com/scl/fi/yssj08eacmb5foa716gi3/Klassische-Konditionierung.mp4?rlkey=9x5iz0goh2jcs9dx49qwldbkp&st=41ja9yh3&raw=1" 
+                type="video/mp4" 
+            />
+            Ihr Browser unterstützt das Video-Tag nicht.
+        </video>
+    </div>
+</div>
+
+            <div class="text-gray-700 text-base leading-snug space-y-4 mt-4">
+                <p><p class="MsoNormal">Das <b>klassische Konditionieren</b> beschreibt eine
+grundlegende Form des Lernens. Es erklärt, <b>wie unser Gehirn zwei Dinge
+miteinander verbindet</b>, die ursprünglich nichts miteinander zu tun hatten –
+und wie dadurch <b>automatische Reaktionen</b> entstehen.<o:p></o:p></p><p data-start="496" data-end="752">
+
+</p><p class="MsoNormal">Oft merken wir gar nicht, dass das passiert. Aber viele
+unserer emotionalen oder körperlichen Reaktionen – wie <b>Angst, Freude, Ekel
+oder Anspannung</b> – entstehen genau auf diese Weise.<o:p></o:p></p></p>
+                <p><p class="MsoNormal">Ein Beispiel aus dem Alltag eines Klienten: Stell dir vor, du bist einmal in einem Aufzug stecken
+geblieben. Es war eng, heiß und du hattest Herzrasen – vielleicht sogar eine
+Panikattacke. Ein paar Wochen später merkst du: Schon <b>der Gedanke an einen Aufzug</b> löst
+Unruhe aus. Dein Körper reagiert, als ob du wieder feststecken würdest – obwohl
+gerade gar nichts passiert.<o:p></o:p></p><p class="MsoNormal">Was ist hier passiert?<br /><span style="border-color: rgb(229, 231, 235); --tw-shadow: 0 0 #0000; --tw-ring-inset: ; --tw-ring-offset-width: 0px; --tw-ring-offset-color: #fff; --tw-ring-color: rgba(59, 130, 246, 0.5); --tw-ring-offset-shadow: 0 0 #0000; --tw-ring-shadow: 0 0 #0000; font-family: &quot;Segoe UI Emoji&quot;, sans-serif;">➡</span>️Dein Gehirn hat gelernt: „<b>Aufzug = Gefahr</b>.“ Es hat also den Aufzug (ein ursprünglich völlig neutraler Reiz) mit der
+Panikattacke (einem stark unangenehmen Erlebnis) <b>verknüpft</b>. <span style="font-size: 1rem; font-family: inherit;">Das ist klassisches Konditionieren.</span></p></p>
+                <p><p class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;&#10;line-height:normal"><span style="font-weight: bolder; font-size: 1rem; font-family: inherit;">Wie funktioniert das genau?</span></p><p class="MsoNormal">Damit diese Art des Lernens entsteht, braucht es drei
+Schritte:<o:p></o:p></p><p class="MsoNormal"><b>1. Unkonditionierter Reiz (UCS)<o:p></o:p></b></p><p class="MsoNormal">Ein <b>unkonditionierter Reiz</b> ist etwas, das automatisch
+eine Reaktion auslöst – ohne dass man es lernen muss.<br />
+Beispiel: Ein lauter Knall erschreckt dich sofort. Das passiert instinktiv, du musst es
+nicht erst üben.<o:p></o:p></p><p class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;&#10;line-height:normal">
+
+
+</p><p class="MsoNormal"><span style="font-family:&quot;Segoe UI Emoji&quot;,sans-serif;&#10;mso-bidi-font-family:&quot;Segoe UI Emoji&quot;">➡</span>️ <b>Reaktion:</b> Du zuckst
+zusammen, dein Herz schlägt schneller, du bist alarmiert.</p><p class="MsoNormal"><br /></p><p class="MsoNormal"><b>2. Konditionierter Reiz (CS)<o:p></o:p></b></p><p class="MsoNormal">Ein <b>konditionierter Reiz</b> ist anfangs <b>neutral</b> –
+er hat keine Bedeutung und löst keine besondere Reaktion aus.<br />
+Wenn dieser neutrale Reiz jedoch <b>mehrmals gemeinsam mit einem starken Reiz</b>
+(wie Angst oder Schmerz) auftritt, verknüpft das Gehirn beide miteinander. </p><p class="MsoNormal"><span style="font-size: 1rem; background-color: initial; font-family: inherit;">Beispiel: </span><span style="font-size: 1rem; background-color: initial; font-family: inherit;">Immer wenn du im Aufzug fährst, bekommst du Panik (weil du einmal stecken
+geblieben bist). </span><span style="font-size: 1rem; background-color: initial; font-family: inherit;">Der Aufzug wird dadurch zum Signal für Angst.</span></p><p class="MsoNormal"><br /></p><p class="MsoNormal"><b>3. Konditionierte Reaktion (CR)<o:p></o:p></b></p><p class="MsoNormal">Nach einiger Zeit reicht der konditionierte Reiz allein aus,
+um dieselbe Reaktion hervorzurufen.<br />
+Beispiel: Du siehst einen Aufzug – und dein Herz beginnt zu rasen. Es ist keine echte Gefahr da, aber dein Körper reagiert, <b>als wäre sie da</b>.<o:p></o:p></p><p class="MsoNormal">
+
+
+
+</p><p class="MsoNormal"><span style="font-size: 1rem; border-color: rgb(229, 231, 235); --tw-shadow: 0 0 #0000; --tw-ring-inset: ; --tw-ring-offset-width: 0px; --tw-ring-offset-color: #fff; --tw-ring-color: rgba(59, 130, 246, 0.5); --tw-ring-offset-shadow: 0 0 #0000; --tw-ring-shadow: 0 0 #0000; font-family: &quot;Segoe UI Emoji&quot;, sans-serif;">➡</span><span style="font-size: 1rem; font-family: inherit;">️</span>Das nennt man eine <b>konditionierte
+Reaktion</b>. Der Aufzug ist zum <b>Angstauslöser</b> geworden.<o:p></o:p></p><p class="MsoNormal"><br /></p><p class="MsoNormal"><b>Warum das wichtig ist<o:p></o:p></b></p><p class="MsoNormal"><span style="font-size:11.0pt;line-height:107%;font-family:&quot;Calibri&quot;,sans-serif;&#10;mso-ascii-theme-font:minor-latin;mso-fareast-font-family:Calibri;mso-fareast-theme-font:&#10;minor-latin;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:&quot;Times New Roman&quot;;&#10;mso-bidi-theme-font:minor-bidi;mso-ansi-language:DE;mso-fareast-language:EN-US;&#10;mso-bidi-language:AR-SA"><span style="font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, &quot;Noto Sans&quot;, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot;; font-size: 16px;">Dieses Lernprinzip erklärt sehr anschaulich, </span></span><span style="font-weight: bolder; font-size: 1rem; font-family: inherit;">wie Ängste, Phobien und andere emotionale Reaktionen entstehen können.</span></p><p class="MsoNormal">In der <b>Verhaltenstherapie</b> nutzt man dieses Wissen
+gezielt, um <b>die alte, belastende Verknüpfung zu lösen</b>. Das geschieht durch ein Verfahren, das man <b>Konfrontationstherapie</b> nennt
+(auch <b>Exposition</b> genannt).<o:p></o:p></p><p class="MsoNormal"><span style="font-size: 1rem; border-color: rgb(229, 231, 235); --tw-shadow: 0 0 #0000; --tw-ring-inset: ; --tw-ring-offset-width: 0px; --tw-ring-offset-color: #fff; --tw-ring-color: rgba(59, 130, 246, 0.5); --tw-ring-offset-shadow: 0 0 #0000; --tw-ring-shadow: 0 0 #0000; font-family: &quot;Segoe UI Emoji&quot;, sans-serif;">➡</span><span style="font-size: 1rem; font-family: inherit;">️</span>Dabei wird die angstauslösende Situation (z. B. der Aufzug) <b>bewusst
+und wiederholt aufgesucht</b>, <b>ohne</b> dass die erwartete Katastrophe (z.
+B. eine Panikattacke) eintritt. <span style="font-size: 1rem; font-family: inherit;">Mit der Zeit lernt das Gehirn etwas Neues: „Der Aufzug ist gar nicht gefährlich. Ich kann ihn benutzen, ohne dass etwas
+Schlimmes passiert.“ </span><span style="font-size: 1rem; font-family: inherit;">Dieser Lernprozess nennt sich </span><b style="font-size: 1rem; font-family: inherit;">Extinktion</b><span style="font-size: 1rem; font-family: inherit;"> – also das
+„Verlernen“ oder </span><b style="font-size: 1rem; font-family: inherit;">Löschen</b><span style="font-size: 1rem; font-family: inherit;"> der alten Angstverknüpfung. </span><span style="font-size: 1rem; font-family: inherit;">So schwächt sich die Angstreaktion nach und nach ab.</span></p></p>
+            </div>
+
+            <div class="bg-blue-50 border-l-4 border-blue-400 p-4 rounded shadow-sm text-sm text-blue-900 mt-4">
+                <p class="font-semibold mb-1">✅ Das Wichtigste auf einen Blick:</p>
+                <ul class="list-disc list-inside space-y-0.5">
+                    <li> Klassisches Konditionieren erklärt, wie Reize miteinander verknüpft sind - dadurch entstehen automatische Reaktionen (auch emotionale)</li>
+                    <li>Viele <b>Ängste und Phobien, </b><span style="font-size:11.0pt;line-height:107%;&#10;font-family:&quot;Calibri&quot;,sans-serif;mso-ascii-theme-font:minor-latin;mso-fareast-font-family:&#10;Calibri;mso-fareast-theme-font:minor-latin;mso-hansi-theme-font:minor-latin;&#10;mso-bidi-font-family:&quot;Times New Roman&quot;;mso-bidi-theme-font:minor-bidi;&#10;mso-ansi-language:DE;mso-fareast-language:EN-US;mso-bidi-language:AR-SA">aber auch andere Arten von psychischen Belastungen, lassen sich dadurch besser verstehen</span></li>
+                    <li>In der Therapie lernt man, <span style="border-color: rgb(229, 231, 235); --tw-shadow: 0 0 #0000; --tw-ring-inset: ; --tw-ring-offset-width: 0px; --tw-ring-offset-color: #fff; --tw-ring-color: rgba(59, 130, 246, 0.5); --tw-ring-offset-shadow: 0 0 #0000; --tw-ring-shadow: 0 0 #0000; font-weight: bolder;">diese Verknüpfungen wieder zu lösen</span>, indem man <span style="border-color: rgb(229, 231, 235); --tw-shadow: 0 0 #0000; --tw-ring-inset: ; --tw-ring-offset-width: 0px; --tw-ring-offset-color: #fff; --tw-ring-color: rgba(59, 130, 246, 0.5); --tw-ring-offset-shadow: 0 0 #0000; --tw-ring-shadow: 0 0 #0000; font-weight: bolder;">neue, sichere Erfahrungen</span> Erfahrungen macht. Strukturiert und zielorientiert.</li>
+                </ul>
+            </div>
+
+            <div class="mt-6 border-t pt-4 border-gray-200">
+                <h4 class="text-lg font-semibold mb-3 text-blue-700">▶️ Arbeitsblatt 5: Klassisches Konditionieren (PDF)</h4>
+                <div class="w-full bg-white p-4 rounded-lg" style="height: 500px;">
+                    <iframe src="https://www.dropbox.com/scl/fi/lfm6ypjz2eqfcta59rpry/Arbeitsblatt_5_Klassisches_Konditionieren.pdf?rlkey=tffqlhrle7w9xz28dh4b8of9b&st=dwgb5qgz&raw=1" width="100%" height="100%" frameborder="0" allowfullscreen="" title="Arbeitsblatt 5 Vorschau" class="rounded-lg shadow-md" style="border: 1px solid #ccc;">
+                        <p class="text-sm text-gray-500 p-4">Ihr Browser unterstützt iFrames nicht oder das Einbetten ist blockiert. 
+                            <a href="https://www.dropbox.com/scl/fi/lfm6ypjz2eqfcta59rpry/Arbeitsblatt_5_Klassisches_Konditionieren.pdf?rlkey=tffqlhrle7w9xz28dh4b8of9b&st=dwgb5qgz&dl=0" target="_blank" class="text-blue-500 hover:underline">Hier PDF direkt öffnen oder herunterladen.</a>
+                        </p>
+                    </iframe>
+                </div>
+            </div>
+
+        </details>
+    </section>
+
+    <section id="abschnitt-2" class="mb-6"> 
+        <details class="bg-abschnitt-2 p-6 rounded-xl shadow">
+            <summary>2. Das Operantes Konditionieren </summary>
+
+            <div class="mt-12 mb-12">
+    <h2 class="text-xl font-bold text-blue-700 mb-4">🎥 Video-Teaser: Das Operante Konditionieren - Überblick</h2>
+    
+    <div class="relative rounded-xl shadow-lg border-4 border-blue-600 overflow-hidden **aspect-video**">
+        <video 
+            class="w-full h-full object-cover" 
+            controls 
+            poster="https://www.dropbox.com/scl/fi/6e7c3elxhfmuhenxse8l0/Video.jpg?rlkey=eucv15h9chf21ir4x43ew9ubu&st=3thic0kz&raw=1" 
+        >
+            <source 
+                src="https://www.dropbox.com/scl/fi/1l6dngeiby3z1rej1c83b/Operante-Konditionierung.mp4?rlkey=i067wqk4c37e4b5pv40atv30a&st=jwcwsmpo&raw=1" 
+                type="video/mp4" 
+            />
+            Ihr Browser unterstützt das Video-Tag nicht.
+        </video>
+    </div>
+</div>
+
+            <div class="text-gray-700 text-base leading-snug mt-4 space-y-4">
+                <p><p class="MsoNormal">Das <b>operante Konditionieren</b> beschreibt, wie wir durch
+<b>Erfahrungen und Konsequenzen</b> lernen. Während das klassische Konditionieren erklärt, <b>wie Reize</b> miteinander
+verknüpft werden, geht es hier darum, <b>wie unser Verhalten</b> durch die
+Folgen beeinflusst wird. <span style="font-size: 1rem; font-family: inherit;">Kurz gesagt:</span></p><p class="MsoNormal">
+<span style="font-family:&quot;Segoe UI Emoji&quot;,sans-serif;mso-bidi-font-family:&quot;Segoe UI Emoji&quot;">➡</span>️
+<b>Wir wiederholen, was sich lohnt – und vermeiden, was unangenehm ist.</b><o:p></o:p></p></p>
+               
+<p><p class="MsoNormal"><b>Was bedeutet Operantes Konditionieren?<o:p></o:p></b></p>
+
+<p class="MsoNormal">Beim operanten Konditionieren lernen wir, dass <b>unser
+Handeln Auswirkungen hat</b>. Unser Gehirn merkt sich, welche Verhaltensweisen zu guten oder schlechten
+Ergebnissen führen – und passt sich entsprechend an.<o:p></o:p></p>
+
+<ul style="margin-top:0cm" type="disc">
+ <li><b><span style="font-family: &quot;Segoe UI Emoji&quot;, sans-serif; font-weight: 400; background-color: rgb(255, 255, 255);">➡ </span>Wenn
+     ein Verhalten belohnt wird</b>, zeigen wir es in Zukunft <b>häufiger</b>.<o:p></o:p></li>
+ <li><b><span style="font-family: &quot;Segoe UI Emoji&quot;, sans-serif; font-weight: 400; background-color: rgb(255, 255, 255);">➡ </span>Wenn
+     ein Verhalten unangenehme Situationen beendet</b>, zeigen wir es ebenfalls
+     <b>häufiger</b>.<o:p></o:p></li>
+ <li><b><span style="font-family: &quot;Segoe UI Emoji&quot;, sans-serif; font-weight: 400; background-color: rgb(255, 255, 255);">➡ </span>Wenn
+     ein Verhalten bestraft wird</b>, zeigen wir es <b>seltener</b>.<o:p></o:p></li>
+</ul>
+
+<p class="MsoNormal">So entsteht über die Zeit ein individuelles Muster: Wir
+lernen, <b>was sich lohnt</b> – und <b>was wir lieber lassen</b>.<o:p></o:p></p></p>
+                
+                <p><p class="MsoNormal"><b>Drei Grundprinzipien des operanten Lernens<o:p></o:p></b></p>
+
+<p class="MsoNormal"><b>1. Positive Verstärkung – etwas Angenehmes kommt hinzu<o:p></o:p></b></p>
+
+<p class="MsoNormal">Ein Verhalten wird durch eine <b>positive Konsequenz</b>
+belohnt.<br />
+Beispiel: Du gibst dir Mühe bei der Arbeit und bekommst ein Lob vom Chef. Das fühlt sich gut an – also wirst du dich auch in Zukunft wahrscheinlich
+wieder anstrengen.<o:p></o:p></p>
+
+<p class="MsoNormal"><span style="font-family:&quot;Segoe UI Emoji&quot;,sans-serif;&#10;mso-bidi-font-family:&quot;Segoe UI Emoji&quot;">➡</span>️ <b>Ergebnis:</b> Das Verhalten
+wird <i>gestärkt</i>.</p><p class="MsoNormal"><b>2. Negative Verstärkung – etwas Unangenehmes verschwindet<o:p></o:p></b></p><p class="MsoNormal">Hier geht es nicht um Bestrafung! Bei der <b>negativen Verstärkung</b> wird ein <b>unangenehmer Zustand beendet
+oder vermieden</b>, und das wirkt wie eine Belohnung. </p><p class="MsoNormal"><span style="font-size: 1rem; font-family: inherit;">Beispiel: </span><span style="font-size: 1rem; font-family: inherit;">Eine Person mit sozialer Angst verlässt eine Feier frühzeitig. </span><span style="font-size: 1rem; font-family: inherit;">In dem Moment fühlt sie sich erleichtert – die Anspannung lässt nach. </span><span style="font-size: 1rem; font-family: inherit;">Diese Erleichterung ist eine </span><b style="font-size: 1rem; font-family: inherit;">negative Verstärkung</b><span style="font-size: 1rem; font-family: inherit;">: Das
+Vermeidungsverhalten wird gestärkt, weil es kurzfristig hilft.</span></p><p class="MsoNormal">
+
+
+
+
+
+</p><p class="MsoNormal"><span style="font-family:&quot;Segoe UI Emoji&quot;,sans-serif;&#10;mso-bidi-font-family:&quot;Segoe UI Emoji&quot;">➡</span>️ <b>Ergebnis:</b> Das Verhalten
+(Vermeidung) tritt häufiger auf – auch wenn es langfristig das Problem <b>aufrechterhält</b>.</p><p class="MsoNormal"><b>3. Positive Bestrafung – unangenehme Konsequenzen folgen<o:p></o:p></b></p><p class="MsoNormal">Wenn auf ein Verhalten etwas Unangenehmes folgt, wird dieses
+Verhalten <b>seltener gezeigt</b>.<o:p></o:p></p><p class="MsoNormal">Beispiel: Ein Kind bekommt Ärger, weil es gelogen hat. Die negative Konsequenz führt dazu, dass das Kind (vielleicht) seltener lügt.<o:p></o:p></p><p class="MsoNormal"><span style="font-family:&quot;Segoe UI Emoji&quot;,sans-serif;&#10;mso-bidi-font-family:&quot;Segoe UI Emoji&quot;">➡</span>️ <b>Ergebnis:</b> Das Verhalten
+wird <i>abgeschwächt</i>.</p><p class="MsoNormal">
+
+
+
+
+
+
+
+</p><p class="MsoNormal"><span style="font-weight: bolder; font-size: 1rem; font-family: inherit;">4. Negative Bestrafung – etwas Angenehmes verschwindet</span></p><p class="MsoNormal"; --tw-shadow: 0 0 #0000; --tw-ring-inset: ; --tw-ring-offset-width: 0px; --tw-ring-offset-color: #fff; --tw-ring-color: rgba(59, 130, 246, 0.5); --tw-ring-offset-shadow: 0 0 #0000; --tw-ring-shadow: 0 0 #0000; background-color: rgb(255, 255, 255);">Bei der negativen Bestrafung wird ein <span style="font-weight: 700; font-size: 1rem; font-family: inherit;">angenehmer Zustand </span><span style="font-size: 1rem; font-family: inherit;">beendet und wirkt somit als Bestrafung. Dadurch wird das Verhalten </span><span style="font-size: 1rem; font-family: inherit; --tw-shadow: 0 0 #0000; --tw-ring-inset: ; --tw-ring-offset-width: 0px; --tw-ring-offset-color: #fff; --tw-ring-color: rgba(59, 130, 246, 0.5); --tw-ring-offset-shadow: 0 0 #0000; --tw-ring-shadow: 0 0 #0000; font-weight: bolder;">seltener gezeigt</span><span style="font-size: 1rem; font-family: inherit;">.</span></p><p class="MsoNormal" style=--tw-shadow: 0 0 #0000; --tw-ring-inset: ; --tw-ring-offset-width: 0px; --tw-ring-offset-color: #fff; --tw-ring-color: rgba(59, 130, 246, 0.5); --tw-ring-offset-shadow: 0 0 #0000; --tw-ring-shadow: 0 0 #0000; background-color: rgb(255, 255, 255);">Beispiel: Ein Kind bekommt Handyverbot (angenommen es nutzt gerne das Handy), weil es etwas getan hat, was seine Eltern nicht als richtig empfanden. Das "Wegnehmen" des Angenehmen (Handy) führt nun dazu, dass es sich bestrafend anfühlt. Das führt in der Tendenz dazu, dass das Kind das vorangegangene  Verhalten (vielleicht) seltener ausübt.<span style="font-family: inherit; font-size: 1rem;"> </span></p><p class="MsoNormal" style=--tw-shadow: 0 0 #0000; --tw-ring-inset: ; --tw-ring-offset-width: 0px; --tw-ring-offset-color: #fff; --tw-ring-color: rgba(59, 130, 246, 0.5); --tw-ring-offset-shadow: 0 0 #0000; --tw-ring-shadow: 0 0 #0000; background-color: rgb(255, 255, 255);"><span style=--tw-shadow: 0 0 #0000; --tw-ring-inset: ; --tw-ring-offset-width: 0px; --tw-ring-offset-color: #fff; --tw-ring-color: rgba(59, 130, 246, 0.5); --tw-ring-offset-shadow: 0 0 #0000; --tw-ring-shadow: 0 0 #0000; font-family: &quot;Segoe UI Emoji&quot;, sans-serif;">➡</span>️ <span style=--tw-shadow: 0 0 #0000; --tw-ring-inset: ; --tw-ring-offset-width: 0px; --tw-ring-offset-color: #fff; --tw-ring-color: rgba(59, 130, 246, 0.5); --tw-ring-offset-shadow: 0 0 #0000; --tw-ring-shadow: 0 0 #0000; font-weight: bolder;">Ergebnis:</span> Das Verhalten wird <i style=--tw-shadow: 0 0 #0000; --tw-ring-inset: ; --tw-ring-offset-width: 0px; --tw-ring-offset-color: #fff; --tw-ring-color: rgba(59, 130, 246, 0.5); --tw-ring-offset-shadow: 0 0 #0000; --tw-ring-shadow: 0 0 #0000; font-weight: bolder;">abgeschwächt</i>.</p></p>
+            </div>
+
+            <div class="bg-blue-50 border-l-4 border-blue-400 p-4 rounded shadow-sm text-sm text-blue-900 mt-4">
+                <p class="font-semibold mb-1">✅ Das Wichtigste auf einen Blick:</p>
+                <ul class="list-disc list-inside space-y-0.5">
+                    <li>Operantes Konditionieren erklärt, wie Konsequenzen Verhalten steuern – wir wiederholen, was sich lohnt, und vermeiden, was uns bestraft.</li>
+                    <li>Die <b style="font-size: 1rem; font-family: inherit;">negative Verstärkung</b> (Vermeiden einer unangenehmen Situation) ist der wichtigste Mechanismus bei der Aufrechterhaltung von Angst- und Vermeidungsverhalten.</li>
+                    <li>Ziel der Therapie ist es, die unerwünschten Verhaltensmuster durch neue, konstruktive Konsequenzen zu ersetzen, z. B. durch <b style="font-size: 1rem; font-family: inherit;">Aktivierung statt Vermeidung</b>.</li>
+                </ul>
+            </div>
+
+            <div class="mt-6 border-t pt-4 border-gray-200">
+                <h4 class="text-lg font-semibold mb-3 text-blue-700">▶️ Arbeitsblatt 6: Operantes Konditionieren (PDF)</h4>
+                <div class="w-full bg-white p-4 rounded-lg" style="height: 500px;">
+                    <iframe src="https://www.dropbox.com/scl/fi/njr84jx6zin5p8evtcdk4/Arbeitsblatt_6_Operantes_Konditionieren.pdf?rlkey=exvxetnn1lj1a0c49cf8480gn&st=0kmiwxvr&raw=1" width="100%" height="100%" frameborder="0" allowfullscreen="" title="Arbeitsblatt 6 Vorschau" class="rounded-lg shadow-md" style="border: 1px solid #ccc;">
+                        <p class="text-sm text-gray-500 p-4">Ihr Browser unterstützt iFrames nicht oder das Einbetten ist blockiert. 
+                            <a href="https://www.dropbox.com/scl/fi/njr84jx6zin5p8evtcdk4/Arbeitsblatt_6_Operantes_Konditionieren.pdf?rlkey=exvxetnn1lj1a0c49cf8480gn&st=0kmiwxvr&raw=1" target="_blank" class="text-blue-500 hover:underline">Hier PDF direkt öffnen oder herunterladen.</a>
+                        </p>
+                    </iframe>
+                </div>
+            </div>
+
+        </details>
+    </section>
+
+    <section id="abschnitt-3" class="mb-6">
+        <details class="bg-abschnitt-3 p-6 rounded-xl shadow">
+            <summary>3. Das Beobachtungslernen</summary>
+
+            <div class="mt-12 mb-12">
+    <h2 class="text-xl font-bold text-blue-700 mb-4">🎥 Video-Teaser: Das Beobachtungslernen - Überblick</h2>
+    
+    <div class="relative rounded-xl shadow-lg border-4 border-blue-600 overflow-hidden **aspect-video**">
+        <video 
+            class="w-full h-full object-cover" 
+            controls 
+            poster="https://www.dropbox.com/scl/fi/6e7c3elxhfmuhenxse8l0/Video.jpg?rlkey=eucv15h9chf21ir4x43ew9ubu&st=3thic0kz&raw=1" 
+        >
+            <source 
+                src="https://www.dropbox.com/scl/fi/zwn5fzruc70mb1me3n6i2/Beobachtungslernen.mp4?rlkey=33u27v23vpmjvvi8d13z0vqp5&st=4t8yx4ke&raw=1" 
+                type="video/mp4" 
+            />
+            Ihr Browser unterstützt das Video-Tag nicht.
+        </video>
+    </div>
+</div>
+
+            <div class="text-gray-700 text-base leading-snug space-y-4 mt-4">
+                <p><p class="MsoNormal">Das <b>Beobachtungslernen</b> (auch „Modelllernen“ genannt)
+beschreibt einen einfachen und wichtigen Lernprozess: <b>Wir lernen, indem wir
+andere beobachten.</b><o:p></o:p></p><p class="MsoNormal">
+</p><p class="MsoNormal">Der Psychologe Albert Bandura prägte diesen Ansatz. Er
+zeigte, dass wir nicht nur aus unseren eigenen Erfahrungen (operantes
+Konditionieren) lernen, sondern auch durch das <b>Zuschauen</b>, was mit anderen
+passiert (stellvertretende Erfahrung).<o:p></o:p></p></p>
+
+                <p><p class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;&#10;line-height:normal">
+
+<span style="font-weight: bolder; background-color: initial; font-size: 1rem; font-family: inherit;">Drei wichtige Aspekte:</span><o:p></o:p></p>
+
+<p class="MsoNormal"><b>1. Lernen durch Nachahmung (Modellernen)<o:p></o:p></b></p>
+
+<p class="MsoNormal">Wir schauen uns an, wie eine Person (das Modell) eine Sache
+macht und versuchen es nachzumachen. Das ist besonders bei komplexen
+Verhaltensweisen wichtig – z. B. beim Erlernen einer Sprache oder einer sozialen
+Fähigkeit.<o:p></o:p></p>
+
+<p class="MsoNormal"><b>2. Stellvertretende Verstärkung<o:p></o:p></b></p>
+
+<p class="MsoNormal">Wir sehen, wie jemand für sein Verhalten belohnt wird (z.
+B. ein Mitschüler bekommt ein Lob für eine gute Präsentation). Das motiviert uns,
+dasselbe Verhalten auch zu zeigen.<o:p></p>
+
+<p class="MsoNormal"><b>3. Stellvertretende Bestrafung<o:p></o:p></b></p>
+
+<p class="MsoNormal">Wir sehen, wie jemand für sein Verhalten bestraft wird (z.
+B. ein Kollege macht einen Fehler und bekommt Ärger). Das verringert die
+Wahrscheinlichkeit, dass wir dasselbe tun.<o:p></p></p>
+
+                <p><p class="MsoNormal"><span style="font-weight: bolder; background-color: initial; font-size: 1rem; font-family: inherit;">Beispiel: Soziale Ängste</span><o:p></o:p></p><p class="MsoNormal">Ein Kind wächst bei Eltern auf, die in sozialen Situationen
+sehr angespannt sind und den Kontakt mit Fremden meiden. Das Kind <b>beobachtet</b>
+dieses Vermeidungsverhalten und die damit verbundene Körperspannung (Angst).<o:p></o:p></p><p class="MsoNormal">
+<span style="font-family:&quot;Segoe UI Emoji&quot;,sans-serif;mso-bidi-font-family:&quot;Segoe UI Emoji&quot;">➡</span>️ 
+Das Kind kann diese <b>Angst und Vermeidung von den Eltern übernehmen</b>, ohne selbst eine schlimme Erfahrung gemacht zu
+haben. Es hat durch Beobachtung gelernt: „Soziale Situation = gefährlich.“<o:p></o:p></p></p>
+                
+                <p><p class="MsoNormal"><b>Bedeutung für die Verhaltenstherapie<o:p></o:p></b></p><p class="MsoNormal">Das Beobachtungslernen spielt eine große Rolle in der Therapie,
+besonders beim Aufbau von Fähigkeiten (Skills) und im Umgang mit Ängsten.<o:p></o:p></p><p class="MsoNormal">
+
+
+</p><p class="MsoNormal">Wenn Klienten bestimmte soziale Fähigkeiten (z. B. "Nein"
+sagen, Grenzen setzen) fehlen, können Therapeuten diese Verhaltensweisen
+vordemonstrieren (sogenanntes <b>Modeling</b>). Der Klient beobachtet, wie der
+Therapeut die Situation meistert, und lernt dadurch, dass das Verhalten möglich
+und erfolgreich ist. Dies senkt die Angst und stärkt die
+Selbstwirksamkeitserwartung („Ich kann das auch lernen“).<o:p></o:p></p></p>
+            </div>
+
+            <div class="bg-blue-50 border-l-4 border-blue-400 p-4 rounded shadow-sm text-sm text-blue-900 mt-4">
+                <p class="font-semibold mb-1">✅ Das Wichtigste auf einen Blick:</p>
+                <ul class="list-disc list-inside space-y-0.5">
+                    <li>Wir lernen neue Verhaltensweisen, Emotionen und Einstellungen, indem wir andere beobachten (Modelllernen).</li>
+                    <li>Das Lernen findet statt, auch wenn wir selbst keine direkte Erfahrung machen (stellvertretende Verstärkung/Bestrafung).</li>
+                    <li>In der Therapie nutzt man das <b>Modeling</b>: Der Therapeut zeigt erwünschtes Verhalten vor (z. B. Konfliktlösung), damit der Klient es leichter selbst umsetzen kann.</li>
+                </ul>
+            </div>
+
+            <div class="mt-6 border-t pt-4 border-gray-200">
+                <h4 class="text-lg font-semibold mb-3 text-blue-700">▶️ Arbeitsblatt 7: Beobachtungslernen (PDF)</h4>
+                <div class="w-full bg-white p-4 rounded-lg" style="height: 500px;">
+                    <iframe src="https://www.dropbox.com/scl/fi/bv4v6tlx1n64l801au5ew/Arbeitsblatt_7_Beobachtungslernen.pdf?rlkey=zz0830wvu9j0f27a41ahq9dr4&st=iop3rd9n&raw=1" width="100%" height="100%" frameborder="0" allowfullscreen="" title="Arbeitsblatt 7 Vorschau" class="rounded-lg shadow-md" style="border: 1px solid #ccc;">
+                        <p class="text-sm text-gray-500 p-4">Ihr Browser unterstützt iFrames nicht oder das Einbetten ist blockiert. 
+                            <a href="https://www.dropbox.com/scl/fi/bv4v6tlx1n64l801au5ew/Arbeitsblatt_7_Beobachtungslernen.pdf?rlkey=zz0830wvu9j0f27a41ahq9dr4&st=iop3rd9n&raw=1" target="_blank" class="text-blue-500 hover:underline">Hier PDF direkt öffnen oder herunterladen.</a>
+                        </p>
+                    </iframe>
+                </div>
+            </div>
+
+        </details>
+    </section>
+
+    <section id="abschnitt-4" class="mb-6">
+        <details class="bg-abschnitt-4 p-6 rounded-xl shadow">
+            <summary>4. Das Kognitive Lernen</summary>
+
+            <div class="text-gray-700 text-base leading-snug space-y-4 mt-4">
+                <p><p class="MsoNormal">Während die ersten drei Lernformen das Lernen durch äußere
+Reize oder Konsequenzen erklären, rückt das <b>Kognitive Lernen</b> das <b>innere
+Erleben</b> in den Mittelpunkt. </p><p class="MsoNormal"><span style="font-size: 1rem; font-family: inherit;">Es geht darum, wie unsere </span><b style="font-size: 1rem; font-family: inherit;">Gedanken, Bewertungen und inneren Überzeugungen</b><span style="font-size: 1rem; font-family: inherit;"> unser Verhalten beeinflussen und steuern.</span></p><p class="MsoNormal"><br /></p><p class="MsoNormal"><span style="font-weight: bolder; background-color: initial; font-size: 1rem; font-family: inherit;">Das Kernprinzip:</span><span style="font-size: 1rem; font-family: inherit;"> Nicht die Situation selbst löst ein Gefühl aus, sondern unsere Bewertung der Situation.</span><o:p></o:p></p></p>
+                
+                <p><p class="MsoNormal"><span style="font-weight: bolder; background-color: initial; font-size: 1rem; font-family: inherit;">Wie entstehen psychische Belastungen?<o:p></o:p></span></p><p class="MsoNormal">Nach kognitiver Sicht entstehen viele psychische Probleme
+durch <b>fehlerhafte, unangemessene oder dysfunktionale Denkweisen</b> (Kognitionen).<o:p></o:o:p></p><p class="MsoNormal">
+</p><p class="MsoNormal">
+</p><p class="MsoNormal"><b>1. Automatische negative Gedanken<o:p></o:p></b></p><p class="MsoNormal">Das sind spontane, oft unbewusste Gedanken, die negativ
+und selbstkritisch sind.<br />
+Beispiel: Eine Präsentation lief nicht perfekt – der automatische Gedanke ist
+sofort: „Das war furchtbar, ich bin inkompetent.“<o:p></o:p></p><p class="MsoNormal">
+</p><p class="MsoNormal"><b>2. Kognitive Verzerrungen (Denkfehler)<o:p></o:p></b></p><p class="MsoNormal">Das sind systematische Fehler in unserer Informationsverarbeitung,
+die uns die Realität verzerrt wahrnehmen lassen.<br />
+Beispiel: <b>Schwarz-Weiß-Denken</b> („Entweder ich bin perfekt oder ich bin ein
+Versager.“) oder <b>Katastrophisieren</b> („Wenn das passiert, ist mein Leben
+vorbei.“).<o:p></o:p></p><p class="MsoNormal">
+</p><p class="MsoNormal"><b>3. Grundannahmen<o:p></o:p></b></p><p class="MsoNormal">Das sind tief verwurzelte Überzeugungen über uns selbst,
+andere und die Welt, die wir in unserer Kindheit gelernt haben.<br />
+Beispiel: „Ich muss immer stark sein.“ oder „Nur wenn ich perfekt bin, werde ich
+geliebt.“<o:p></o:p></p></p>
+                
+                <p><p class="MsoNormal"><b>Bedeutung für die Verhaltenstherapie<o:p></o:p></b></p><p class="MsoNormal">Die <b>Kognitive Verhaltenstherapie (KVT)</b> setzt genau hier
+an: Sie geht davon aus, dass wir lernen können, unsere Denkweisen zu verändern. <span style="font-size: 1rem; font-family: inherit;">Ziel ist es, die dysfunktionalen Muster zu erkennen, zu hinterfragen und in hilfreichere Kognitionen umzuwandeln.</span><o:p></o:p></p><p class="MsoNormal">
+
+
+</p><p class="MsoNormal"><b>Die kognitive Umstrukturierung<o:p></o:p></b></p><p class="MsoNormal">Der wichtigste therapeutische Schritt ist die <b>kognitive
+Umstrukturierung</b>, die in vier Phasen abläuft:<o:p></o:p></p>
+
+<p class="MsoNormal"><b>1. Erkennen:</b> Der Klient lernt, seine automatischen Gedanken
+in bestimmten Situationen zu identifizieren.<o:p></o:p></p>
+<p class="MsoNormal"><b>2. Überprüfen:</b> Die Gedanken werden auf ihren Wahrheitsgehalt,
+ihre Angemessenheit und ihre Nützlichkeit hinterfragt (z. B. „Welche Beweise gibt
+es dafür, dass ich inkompetent bin?“).<o:p></o:p></p>
+<p class="MsoNormal"><b>3. Ersetzen:</b> Der dysfunktionale Gedanke wird durch eine
+realistischere und funktionalere Alternative ersetzt (z. B. statt „Ich bin ein
+Versager“ wird formuliert: „Ich habe einen Fehler gemacht, aber ich kann daraus
+lernen. Nächstes Mal mache ich es besser.“).<o:p></o:p></p>
+<p class="MsoNormal"><b>4. Verhaltensänderung:</b> Das neue Denkmuster führt zu einem
+konstruktiveren Verhalten.<o:p></o:p></p></p>
+            </div>
+
+            <div class="bg-blue-50 border-l-4 border-blue-400 p-4 rounded shadow-sm text-sm text-blue-900 mt-4">
+                <p class="font-semibold mb-1">✅ Das Wichtigste auf einen Blick:</p>
+                <ul class="list-disc list-inside space-y-0.5">
+                    <li>Das Kognitive Lernen betont die Rolle unserer <b>Gedanken und Bewertungen</b> für unsere Gefühle und unser Verhalten.</li>
+                    <li>Probleme entstehen oft durch <b>automatische negative Gedanken</b> und <b>Denkfehler</b> (kognitive Verzerrungen).</li>
+                    <li>Die Therapie nutzt die <b>kognitive Umstrukturierung</b>, um diese Gedanken zu erkennen, zu hinterfragen und in realistischere, nützlichere Überzeugungen umzuwandeln.</li>
+                </ul>
+            </div>
+
+            <div class="mt-6 border-t pt-4 border-gray-200">
+                <h4 class="text-lg font-semibold mb-3 text-blue-700">▶️ Arbeitsblatt 8: Kognitives Lernen (PDF)</h4>
+                <div class="w-full bg-white p-4 rounded-lg" style="height: 500px;">
+                    <iframe src="https://www.dropbox.com/scl/fi/41q4uazyxnlnc4kyatpsf/Arbeitsblatt_8_Kognitives_Lernen.pdf?rlkey=nch06gy08088qmn3jsbax75dg&st=us72xsfb&raw=1" width="100%" height="100%" frameborder="0" allowfullscreen="" title="Arbeitsblatt 8 Vorschau" class="rounded-lg shadow-md" style="border: 1px solid #ccc;">
+                        <p class="text-sm text-gray-500 p-4">Ihr Browser unterstützt iFrames nicht oder das Einbetten ist blockiert. 
+                            <a href="https://www.dropbox.com/scl/fi/41q4uazyxnlnc4kyatpsf/Arbeitsblatt_8_Kognitives_Lernen.pdf?rlkey=nch06gy08088qmn3jsbax75dg&st=us72xsfb&dl=0" target="_blank" class="text-blue-500 hover:underline">Hier PDF direkt öffnen oder herunterladen.</a>
+                        </p>
+                    </iframe>
+                </div>
+            </div>
+
+        </details>
+    </section>
+
+    
+    
+    <div class="bg-green-50 border-l-4 border-green-400 p-6 rounded-xl shadow mb-12">
+    <h2 class="text-xl font-semibold text-green-700 mb-2">Die Lerngrundlagen</h2>
+    <p class="text-gray-700 mb-4">
+        Du hast nun das Kapitel mit den Lernmechanismen erfolgreich durchgearbeitet. Ein weiterer wichtiger Schritt zu einem besseren Verständnis! Sehr schön! Weiter geht es mit dem nächsten Kapitel.
+    </p>
+    
+    <div class="flex justify-end space-x-4">
+        
+        <a href="2-biopsychosozialemodell.html" class="inline-block bg-gray-500 hover:bg-gray-600 text-white font-semibold px-6 py-3 rounded-lg shadow transition duration-300 flex items-center">
+            &larr; Zurück zum Bio-Psycho-Sozialen Modell
+        </a>
+
+        <a href="4-verhaltensanalyse.html" class="inline-block bg-green-600 hover:bg-green-700 text-white font-semibold px-6 py-3 rounded-lg shadow transition duration-300">
+            ➔ Jetzt weiter mit dem nächsten Kapitel
+        </a>
+    </div>
+</div>   
+<footer class="mt-16 py-8 bg-gray-100 border-t border-gray-200">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-center space-x-8">
+        
+        <a href="impressum.html" 
+           class="text-sm font-medium text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out underline">
+            Impressum
+        </a>
+
+        <a href="datenschutz.html" 
+           class="text-sm font-medium text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out underline">
+            Datenschutzerklärung
+        </a>
+
+    </div>
+</footer>
+</body>
+</html>

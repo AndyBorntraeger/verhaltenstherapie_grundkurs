@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zugang zum Stresskurs</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .login-container {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+        h2 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .input-group {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+        .input-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #555;
+        }
+        .input-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box; /* Stellt sicher, dass Padding und Border in der Breite enthalten sind */
+        }
+        button {
+            background-color: #4CAF50; /* Grün */
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+            margin-top: 10px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .error-message {
+            color: #e74c3c; /* Rot */
+            margin-top: 15px;
+            font-weight: bold;
+            display: none; /* Am Anfang versteckt */
+        }
+    </style>
+</head>
+<body>
+
+<div class="login-container">
+    <h2>🔑 Zugang zum Stresskurs</h2>
+    <p>Bitte geben Sie Ihren Nutzeraccount und Ihr Passwort ein.</p>
+
+    <div class="input-group">
+        <label for="username">Nutzeraccount</label>
+        <input type="text" id="username" name="username" required>
+    </div>
+
+    <div class="input-group">
+        <label for="password">Passwort</label>
+        <input type="password" id="password" name="password" required>
+    </div>
+
+    <button onclick="checkLogin()">Login</button>
+
+    <p id="errorMessage" class="error-message">
+        Falscher Nutzeraccount oder falsches Passwort. Bitte versuchen Sie es erneut.
+    </p>
+</div>
+
+<script>
+    function checkLogin() {
+        // HIER die korrekten Zugangsdaten festlegen
+        const correctUsername = "kursnutzer";
+        const correctPassword = "stressfrei2025";
+        const targetPage = "1-einfuehrung.html"; // Die Seite, zu der weitergeleitet werden soll
+
+        // Werte aus den Eingabefeldern holen
+        const enteredUsername = document.getElementById("username").value;
+        const enteredPassword = document.getElementById("password").value;
+        const errorElement = document.getElementById("errorMessage");
+
+        // Überprüfung der Zugangsdaten
+        if (enteredUsername === correctUsername && enteredPassword === correctPassword) {
+            // Erfolg: Fehlermeldung ausblenden und weiterleiten
+            errorElement.style.display = 'none';
+            window.location.href = targetPage;
+        } else {
+            // Fehler: Fehlermeldung anzeigen
+            errorElement.style.display = 'block';
+            // Optional: Eingabefelder leeren
+            document.getElementById("password").value = ''; 
+        }
+    }
+</script>
+
+</body>
+</html>

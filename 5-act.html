@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grundlagen der Verhaltenstherapie: Akzeptanz- und Commitment-Therapie (ACT)</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+
+    <style>
+        /* Allgemeine Details/Summary Styles - Konsistent mit anderen Dateien */
+        details summary {
+            background: rgba(0, 0, 0, 0.6);
+            color: white;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            cursor: pointer;
+        }
+
+        details[open] > *:not(summary) {
+            background: rgba(255, 255, 255, 0.8);
+            color: #1a202c;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            margin-top: 0.5rem;
+        }
+
+        /* HINTERGRUNDBILDER FÜR ACT ABSCHNITTE */
+        /* Die Bilder wurden Platzhaltern (ACT-Konzepten) zugeordnet, um die Struktur zu zeigen. */
+
+        /* 1: EINFÜHRUNG / HEXAFLEX - Psychologische Flexibilität */
+        .bg-act-1 { 
+            background: url('https://www.dropbox.com/scl/fi/31f2pud9t4n2qztraji6f/act.jpg?rlkey=37k3l5q7iaiz8wz89ldl7b8za&st=fanlbbig&raw=1') center/cover no-repeat; 
+        } 
+        
+        /* 2: PROZESS A - Akzeptanz & Defusion */
+        .bg-act-2 { 
+            background: url('https://www.dropbox.com/scl/fi/prsbno7jin9hvnrdeqxwa/akzeptanz.jpg?rlkey=d2ljslrnypjbodn5gr73jjwi2&st=ckswip33&raw=1') center/cover no-repeat; 
+        }
+        
+        /* 3: PROZESS B - Gegenwartskontakt & Selbst als Kontext */
+        .bg-act-3 { 
+            background: url('https://www.dropbox.com/scl/fi/d3ptoigl4np757604g6lz/gegenwart.jpg?rlkey=gqkmsrbsewpd9y0fcfzf1ww4h&st=zneo7g49&raw=1') center/cover no-repeat; 
+        }
+        
+        /* 4: PROZESS C - Werte & Engagiertes Handeln */
+        .bg-act-4 { 
+            background: url('https://www.dropbox.com/scl/fi/evbkvnw8c9wx70lenjd0w/werte.jpg?rlkey=zblx6wnjft4e7zt13ntcz59t5&st=ur3ivxfb&raw=1') center/cover no-repeat; 
+        }
+        
+        /* 5: ANWENDUNG / ZUSAMMENFASSUNG */
+        .bg-act-5 { 
+            background: url('https://www.dropbox.com/scl/fi/huk5813k48ddeync6jzve/handeln.jpg?rlkey=thbetik9twhwbuapyqj7dwzq4&st=he5r8okt&raw=1') center/cover no-repeat; 
+        }
+
+        details {
+            border-radius: 0.5rem;
+            margin-bottom: 1.5rem;
+            color: white;
+            position: relative;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.06);
+        }
+
+        details summary {
+            background: rgba(0, 0, 0, 0.6);
+            padding: 1rem;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            color: white;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50 text-gray-800 p-4 sm:p-8 leading-relaxed max-w-3xl mx-auto">
+
+    <nav class="fixed top-0 left-0 w-full z-50 bg-white bg-opacity-90 shadow-md">
+        <div class="max-w-7xl mx-auto px-4 py-2 flex justify-center space-x-4 overflow-x-auto text-sm sm:text-base">
+            <a class="text-blue-700 hover:underline whitespace-nowrap" href="#abschnitt-1">1. Grundlagen (Hexaflex)</a>
+            <a class="text-blue-700 hover:underline whitespace-nowrap" href="#abschnitt-2">2. Akzeptanz & Defusion</a>
+            <a class="text-blue-700 hover:underline whitespace-nowrap" href="#abschnitt-3">3. Achtsamkeit & Selbst</a>
+            <a class="text-blue-700 hover:underline whitespace-nowrap" href="#abschnitt-4">4. Werte & Handeln</a>
+            <a class="text-blue-700 hover:underline whitespace-nowrap" href="#abschnitt-5">5. Anwendung</a>
+        </div>
+    </nav>
+    <div class="h-16"></div>
+
+    <h1 class="text-3xl font-bold text-blue-700 mb-8">Grundlagen der Verhaltenstherapie: Akzeptanz- und Commitment-Therapie (ACT)</h1>
+    <h2 class="text-xl font-semibold text-gray-700 mb-8">Psychologische Flexibilität: Der Kern des Hexaflex-Modells</h2>
+
+    <section class="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-12 mb-12">
+
+        <a href="#abschnitt-1" class="relative border-4 border-blue-600 rounded-lg shadow hover:shadow-xl transition duration-300 transform hover:scale-105 bg-white overflow-hidden block">
+            <span class="absolute top-2 left-2 bg-blue-600 text-white text-xs px-2 py-1 rounded shadow">Schritt 1 von 5</span>
+            <div class="w-full h-48 bg-act-1 rounded-t-lg"></div>
+            <div class="absolute inset-0 bg-blue-600 bg-opacity-60 text-white text-sm font-semibold flex items-center justify-center opacity-0 hover:opacity-100 transition">
+                Jetzt starten
+            </div>
+            <div class="p-4">
+                <h3 class="text-lg font-semibold mb-1">Abschnitt 1: ACT: Dritte Welle und Hexaflex</h3>
+                <p class="text-sm text-gray-600">Ziel: Psychologische Flexibilität</p>
+            </div>
+        </a>
+
+        <a href="#abschnitt-2" class="relative border-4 border-blue-600 rounded-lg shadow hover:shadow-xl transition duration-300 transform hover:scale-105 bg-white overflow-hidden block">
+            <span class="absolute top-2 left-2 bg-blue-600 text-white text-xs px-2 py-1 rounded shadow">Schritt 2 von 5</span>
+            <div class="w-full h-48 bg-act-2 rounded-t-lg"></div>
+            <div class="absolute inset-0 bg-blue-600 bg-opacity-60 text-white text-sm font-semibold flex items-center justify-center opacity-0 hover:opacity-100 transition">
+                Jetzt starten
+            </div>
+            <div class="p-4">
+                <h3 class="text-lg font-semibold mb-1">Abschnitt 2: Akzeptanz und Defusion</h3>
+                <p class="text-sm text-gray-600">Offenheit für innere Erfahrungen</p>
+            </div>
+        </a>
+
+        <a href="#abschnitt-3" class="relative border-4 border-blue-600 rounded-lg shadow hover:shadow-xl transition duration-300 transform hover:scale-105 bg-white overflow-hidden block">
+            <span class="absolute top-2 left-2 bg-blue-600 text-white text-xs px-2 py-1 rounded shadow">Schritt 3 von 5</span>
+            <div class="w-full h-48 bg-act-3 rounded-t-lg"></div>
+            <div class="absolute inset-0 bg-blue-600 bg-opacity-60 text-white text-sm font-semibold flex items-center justify-center opacity-0 hover:opacity-100 transition">
+                Jetzt starten
+            </div>
+            <div class="p-4">
+                <h3 class="text-lg font-semibold mb-1">Abschnitt 3: Gegenwartskontakt und Selbst als Kontext</h3>
+                <p class="text-sm text-gray-600">Achtsamkeit und die beobachtende Rolle</p>
+            </div>
+        </a>
+
+        <a href="#abschnitt-4" class="relative border-4 border-blue-600 rounded-lg shadow hover:shadow-xl transition duration-300 transform hover:scale-105 bg-white overflow-hidden block">
+            <span class="absolute top-2 left-2 bg-blue-600 text-white text-xs px-2 py-1 rounded shadow">Schritt 4 von 5</span>
+            <div class="w-full h-48 bg-act-4 rounded-t-lg"></div>
+            <div class="absolute inset-0 bg-blue-600 bg-opacity-60 text-white text-sm font-semibold flex items-center justify-center opacity-0 hover:opacity-100 transition">
+                Jetzt starten
+            </div>
+            <div class="p-4">
+                <h3 class="text-lg font-semibold mb-1">Abschnitt 4: Werte und Engagiertes Handeln</h3>
+                <p class="text-sm text-gray-600">Richtung finden und Commitment zeigen</p>
+            </div>
+        </a>
+        
+        <a href="#abschnitt-5" class="relative border-4 border-blue-600 rounded-lg shadow hover:shadow-xl transition duration-300 transform hover:scale-105 bg-white overflow-hidden block">
+            <span class="absolute top-2 left-2 bg-blue-600 text-white text-xs px-2 py-1 rounded shadow">Schritt 5 von 5</span>
+            <div class="w-full h-48 bg-act-5 rounded-t-lg"></div>
+            <div class="absolute inset-0 bg-blue-600 bg-opacity-60 text-white text-sm font-semibold flex items-center justify-center opacity-0 hover:opacity-100 transition">
+                Jetzt starten
+            </div>
+            <div class="p-4">
+                <h3 class="text-lg font-semibold mb-1">Abschnitt 5: Anwendung und Zusammenfassung</h3>
+                <p class="text-sm text-gray-600">Übungen und Integration</p>
+            </div>
+        </a>
+            
+    </section>
+    
+    
+    <section id="abschnitt-1" class="mb-6">
+        <details class="bg-act-1 p-6 rounded-xl shadow">
+            <summary>1. Grundlagen der ACT: Dritte Welle, Erlebnisvermeidung und der Hexaflex</summary>
+
+            <div class="text-gray-700 text-base leading-snug space-y-4 mt-4">
+                <p>Die <b>Akzeptanz- und Commitment-Therapie (ACT)</b>, gesprochen als einzelnes Wort ("act"), gehört zur <b>dritten Welle</b> der Verhaltenstherapie. Im Gegensatz zu älteren VT-Ansätzen liegt der Fokus nicht primär auf der Änderung von Gedanken oder Gefühlen, sondern auf der <b>Änderung der Funktion</b> von Gedanken und der <b>Akzeptanz</b> von unangenehmen inneren Erfahrungen.</p>
+                
+                <p><b style="font-size: 1rem; font-family: inherit;">Kernproblem: Erlebnisvermeidung (Experiential Avoidance)</b></p>
+                <p>ACT geht davon aus, dass das Hauptproblem vieler psychischer Beschwerden die <b>Erlebnisvermeidung</b> ist: Der Versuch, unangenehme innere Zustände (Gedanken, Gefühle, körperliche Empfindungen) aktiv zu kontrollieren, zu unterdrücken oder loszuwerden. Paradoxerweise führt dieser Kampf gegen die eigenen Erfahrungen langfristig zu mehr Leid und weniger Lebensqualität.</p>
+
+                <p><b style="font-size: 1rem; font-family: inherit;">Übergeordnetes Ziel: Psychologische Flexibilität</b></p>
+                <p>Das Ziel der ACT ist die Erreichung der <b>Psychologischen Flexibilität</b>: Die Fähigkeit, im gegenwärtigen Moment bewusst zu sein, ohne Abwehr auf Gedanken und Gefühle zu reagieren, und das eigene Verhalten in den Dienst der eigenen <b>Werte</b> zu stellen.</p>
+                
+                <p><b style="font-size: 1rem; font-family: inherit;">Das Hexaflex-Modell</b></p>
+                <p>Die Psychologische Flexibilität wird durch sechs miteinander verbundene Prozesse erreicht, die oft als "Hexaflex" dargestellt werden. Sie können in zwei Hauptbereiche unterteilt werden:</p>
+                <ul class="list-disc list-inside ml-4 space-y-2">
+                    <li><b>1) Offenheit und Achtsamkeit:</b> Akzeptanz, Defusion, Gegenwartskontakt, Selbst als Kontext. (Umgang mit dem inneren Erleben)</li>
+                    <li><b>2) Werte und Engagement:</b> Werteklärung, Engagiertes Handeln. (Veränderung des äußeren Verhaltens)</li>
+                </ul>
+            </div>
+
+            <div class="bg-blue-50 border-l-4 border-blue-400 p-4 rounded shadow-sm text-sm text-blue-900 mt-4">
+                <p class="font-semibold mb-1">✅ Das Wichtigste auf einen Blick:</p>
+                <ul class="list-disc list-inside space-y-0.5">
+                    <li>ACT ist Teil der Verhaltenstherapie.</li>
+                    <li>Zentrale Annahme: <b>Erlebnisvermeidung</b> ist die Wurzel vieler Probleme.</li>
+                    <li>Übergeordnetes Ziel ist die <b>Psychologische Flexibilität</b>.</li>
+                </ul>
+            </div>
+        </details>
+    </section>
+    
+    <section id="abschnitt-2" class="mb-6">
+        <details class="bg-act-2 p-6 rounded-xl shadow">
+            <summary>2. Prozesse der Offenheit: Akzeptanz und Kognitive Defusion</summary>
+
+            <div class="text-gray-700 text-base leading-snug space-y-4 mt-4">
+                <p><b style="font-size: 1rem; font-family: inherit;">Prozess 1: Akzeptanz (Acceptance)</b></p>
+                <p>Akzeptanz bedeutet, innere Zustände - egal ob angenehm (z.B. Freude) oder unangenehm (z.B. Ängste) erlebt - <b>ohne Widerstand und ohne Bewertung</b> willkommen zu heißen. Es ist keine Resignation oder Gleichgültigkeit, sondern die aktive Entscheidung, den Kampf gegen das Unvermeidliche aufzugeben. Akzeptanz ist sozusagen die Basis für eine erfolgreiche Veränderung.</p>
+                <ul class="list-disc list-inside ml-4 space-y-2">
+                    <li><b>Ziel:</b> Raum für Gefühle schaffen.</li>
+                    <li><b>Metapher:</b> Ich lege das Schwert, mit dem ich im Kampf mit meinem Inneren bin, nieder.</li>
+                </ul>
+
+                <p><b style="font-size: 1rem; font-family: inherit;">Prozess 2: Kognitive Defusion (Defusion)</b></p>
+                <p>Defusion ist die Technik, sich von seinen Gedanken zu <b>distanzieren</b>, anstatt sie als absolute Wahrheiten zu sehen. Der Gedanke wird als das betrachtet, was er ist: ein Produkt des Geistes (Worte, Bilder), und <b>nicht</b> als eine Tatsache oder ein Befehl.</p>
+                <ul class="list-disc list-inside ml-4 space-y-2">
+                    <li><b>Fusion (Verschmelzung):</b> Innere Stimme sagt "Ich bin ein Versager." (Der Gedanke fühlt sich an als stimme dieser. Er ist sozusagen die Realität.)</li>
+                    <li><b>Defusion (Entschmelzen, Trennung):</b> Es gibt verschiedene Methoden um eine Defusion zu erreichen. Diese Methoden müssen ausprobiert werden, damit man die für sich passende finden kann. Hier am Beispiel der Methode, die für mich gut funktioniert: Ich formuliere vor den Satz <b>"Ich habe den Gedanken, dass..."</b> z.B. "Ich habe den Gedanken, dass ich ein Versager bin." (Der Gedanke wird beobachtet.)</li>
+                    <li><b>Techniken:</b> Der Fantasie sind kaum grenzen gesetzt. Beispiele: Lassen Sie Ihre Gedanken auf Wolken am Himmel vorbeiziehen. Nutzen Sie Ihre musikalischen Fähigkeiten und "betrachten" Ihre Gedanken in einer bestimmten Tonlage oder mit einer Melodie. Lassen Sie Ihre Gedanken auf Ihrem inneren Auge in einem Fernseher vorbeiziehen. Lassen Sie Darth Vader Ihre Gedanken sprechen usw.</li>
+                </ul>
+            </div>
+
+            <div class="bg-blue-50 border-l-4 border-blue-400 p-4 rounded shadow-sm text-sm text-blue-900 mt-4">
+                <p class="font-semibold mb-1">✅ Das Wichtigste auf einen Blick:</p>
+                <ul class="list-disc list-inside space-y-0.5">
+                    <li><b>Akzeptanz:</b> Die inneren Zustände nicht bekämpfen.</li>
+                    <li><b>Kognitive Defusion:</b> Den Abstand zwischen sich selbst und seinen Gedanken herstellen.</li>
+                    <li>Gemeinsames Ziel: Die Dominanz der Gedanken über das Verhalten reduzieren.</li>
+                </ul>
+            </div>
+            
+            <div class="mt-6 border-t pt-4 border-gray-200">
+                <h4 class="text-lg font-semibold mb-3 text-blue-700">▶️ Arbeitsblatt 16: Defusion-Übungen (PDF)</h4>
+                <div class="w-full" style="height: 500px;">
+                    <iframe 
+                        src="https://www.dropbox.com/scl/fi/ef5edjf0yr66ojvxawhg3/Arbeitsblatt_16_Akzeptanz_und_Defusion.pdf?rlkey=7qd0w6pikul2gk47cz4iuw0vq&st=xsdzvfm3&raw=1" 
+                        width="100%" 
+                        height="100%" 
+                        frameborder="0" 
+                        allowfullscreen="" 
+                        title="Arbeitsblatt 16 Vorschau"
+                        class="rounded-lg shadow-md"
+                        style="border: 1px solid #ccc;"
+                    >
+                        <p class="text-sm text-gray-500 p-4">Ihr Browser unterstützt iFrames nicht. 
+                            <a href="https://www.dropbox.com/scl/fi/placeholder-defusion.pdf?rlkey=xyz123abc&dl=0" target="_blank" class="text-blue-500 hover:underline">Hier PDF direkt öffnen oder herunterladen.</a>
+                        </p>
+                    </iframe>
+                </div>
+            </div>
+            
+        </details>
+    </section>
+
+    <section id="abschnitt-3" class="mb-6">
+        <details class="bg-act-3 p-6 rounded-xl shadow">
+            <summary>3. Prozesse der Achtsamkeit: Gegenwartskontakt und Selbst als Kontext</summary>
+
+            <div class="text-gray-700 text-base leading-snug space-y-4 mt-4">
+                <p><b style="font-size: 1rem; font-family: inherit;">Prozess 3: Gegenwartskontakt (Contact with the Present Moment)</b></p>
+                <p>Dieser Prozess zielt auf die <b>Achtsamkeit</b> ab: Achtsamkeit ist <b>"die bewusste und nicht-wertende Hinwendung zur gegenwärtigen Erfahrung"</b>. Dies beinhaltet die Wahrnehmung von äußeren (Sehen, Hören, Riechen) und inneren (Körperempfindungen, Gefühle) Reizen, ohne sich in Gedanken über Vergangenheit oder Zukunft zu verlieren.</p>
+                <ul class="list-disc list-inside ml-4 space-y-2">
+                    <li><b>Ziel:</b> Volle bewusste Präsenz und Reduzierung des "Autopiloten".</li>
+                    <li><b>Übungen:</b> Es gibt sehr viele Achtsamkeitsübungen, die hilfreich bei dem eigenen Training sein können, z.B. Body Scan, achtsames Essen, Fokus auf die Atmung. Am Anfang empfiehlt es sich, den für sich einfachsten Zugang zu wählen (überlegen Sie sich, welchen Sinn (hören, sehen, riechen, tasten, schmecken) sie gerne mögen und entwickeln dazu eine Achtsamkeitsübung. Wenn ich z.B. meinen Geschmackssinn besonders mag, kann ich versuchen aus einem Essen alle Bestandteile herauszuschmecken und diese in "neutralen Worten" zu beschreiben.</li>
+                </ul>
+
+                <p><b style="font-size: 1rem; font-family: inherit;">Prozess 4: Selbst als Kontext (Self-as-Context)</b></p>
+                <p>Hier wird das <b>Beobachtende Selbst</b> etabliert, das von den ständigen Gedanken und Gefühlen (dem "Konzeptualisierten Selbst" oder "Gedankenselbst") getrennt ist. Dieses Konzept wird häufig nur schwer verstanden - sollte es also nicht direckt "klicken" ist das normal. Das Selbst als Kontext ist der unbewegte Raum oder die Bühne, auf der die inneren Erfahrungen (Gedanken, Gefühle, Körperempfindungen) erscheinen und vergehen.</p>
+                <ul class="list-disc list-inside ml-4 space-y-2">
+                    <li><b>Ziel:</b> Erkenntnis, dass man nicht die eigenen Gedanken oder Gefühle ist, sondern derjenige, der sie wahrnimmt.</li>
+                    <li><b>Metapher:</b> Ich stelle mir vor meinem inneren Auge ein blauer Himmel vor mit vorbeiziehenden Wolken. Dann ist der Himmel das Beobachtende Selbst und die vorbeiziehenden Wolken sind die Gedanken und Gefühlen.</li>
+                </ul>
+            </div>
+
+            <div class="bg-blue-50 border-l-4 border-blue-400 p-4 rounded shadow-sm text-sm text-blue-900 mt-4">
+                <p class="font-semibold mb-1">✅ Das Wichtigste auf einen Blick:</p>
+                <ul class="list-disc list-inside space-y-0.5">
+                    <li><b>Gegenwartskontakt:</b> Bewusste Wahrnehmung des Hier und Jetzt.</li>
+                    <li><b>Selbst als Kontext:</b> Die Etablierung einer stabilen, beobachtenden Perspektive.</li>
+                    <li>Diese Prozesse bilden die Basis für ein klares, nicht-reaktives Handeln.</li>
+                </ul>
+            </div>
+            
+        </details>
+    </section>
+
+    <section id="abschnitt-4" class="mb-6">
+        <details class="bg-act-4 p-6 rounded-xl shadow">
+            <summary>4. Prozesse des Handelns: Werte und Engagiertes Handeln</summary>
+
+            <div class="text-gray-700 text-base leading-snug space-y-4 mt-4">
+                <p><b style="font-size: 1rem; font-family: inherit;">Prozess 5: Werteklärung (Values)</b></p>
+                <p>Wertvorstellungen sind selbstgewählte, globale Lebensrichtungen (z. B. Liebe, Kreativität, Ehrlichkeit, Gesundheit). Objektiv haben Wertvorstellungen keinen "eigenen Wert", sondern erhalten diesen durch die Wahl des Wertes. Beispiel: Das Bild meiner Großmutter hat objektiv gesehen keinen Wert (ich könnte es wahrscheinlich niemandem verkaufen), dennoch könnte es für mich "unbezahlbar" sein. Ich habe diesem "Ding" (also dem Bild) also einen imaginären Wert zugeschrieben. Werte sind keine Ziele, die man abhakt, sondern kontinuierliche Prozesse, die die Lebensqualität definieren. Werte geben die Motivation und Richtung für das engagierte Handeln, selbst wenn es unangenehm ist. Beispiel: Wenn Ihnen jemand die Frage stellt: "Wie zufrieden bist du mit deinem Leben?" werden Sie anhand selbst gewählter Parameter darauf antworten. Wenn mir z.B. Geld wichtig ist (das soll in diesem Beispiel den Wert darstellen), dann werden Sie im Falle eines wohl gefüllten Kontos wahrscheinlich zufriedener sein (und dementsprechend antworten) <b>im Vergleich</b> mit einem Konto im Minus. Eine Annäherung an unsere inneren Werte fühlt sich erfüllender an als eine Entfernung von diesen. Das ist die Grundüberlegung, weshalb es sich lohnt, seine Werte auszuleben.</p>
+                <ul class="list-disc list-inside ml-4 space-y-2">
+                    <li><b>Abgrenzung zum Ziel:</b> Ein Ziel ist endgültig (z. B. Job beenden), ein Wert ist fortlaufend (z. B. bedeutungsvolle Arbeit leisten).</li>
+                    <li><b>Frage:</b> Wie wollen Sie sich in den Bereichen Ihres Lebens (Beziehungen, Arbeit, Selbstfürsorge) verhalten?</li>
+                </ul>
+
+                <p><b style="font-size: 1rem; font-family: inherit;">Prozess 6: Engagiertes Handeln (Committed Action)</b></p>
+                <p>Engagiertes Handeln ist der Prozess, in dem konkrete, <b>wertegeleitete Verhaltensschritte</b> gesetzt werden. Es beinhaltet die Fähigkeit, das Notwendige zu tun – auch in Anwesenheit schwieriger Gedanken, Gefühle und Empfindungen (die durch Akzeptanz und Defusion toleriert werden).</p>
+                <ul class="list-disc list-inside ml-4 space-y-2">
+                    <li><b>Ziel:</b> Aufbau von wertorientiertem Verhalten, auch wenn Schwierigkeiten oder Herausforderungen auftreten.</li>
+                    <li><b>Planung:</b> Von Werten abgeleitete, spezifische, messbare Ziele setzen (z. B. Wert "Freundschaft"; Ziel: Diese Woche einen Freund anrufen).</li>
+                </ul>
+            </div>
+
+            <div class="bg-blue-50 border-l-4 border-blue-400 p-4 rounded shadow-sm text-sm text-blue-900 mt-4">
+                <p class="font-semibold mb-1">✅ Das Wichtigste auf einen Blick:</p>
+                <ul class="list-disc list-inside space-y-0.5">
+                    <li><b>Werte:</b> Definieren die Richtung und den Sinn des Lebens. Sind Grundpfeiler eines zufriedenen Lebens.</li>
+                    <li><b>Engagiertes Handeln:</b> Ist die Umsetzung der Werte in konkrete Schritte.</li>
+                    <li>Diese Prozesse führen zu einem erfüllteren und bedeutungsvolleren Leben.</li>
+                </ul>
+            </div>
+            
+            <div class="mt-6 border-t pt-4 border-gray-200">
+                <h4 class="text-lg font-semibold mb-3 text-blue-700">▶️ Arbeitsblatt 17: Wertekompass (PDF)</h4>
+                <div class="w-full" style="height: 500px;">
+                    <iframe 
+                        src="https://www.dropbox.com/scl/fi/gi2ra8i0ekkhtvlz30ref/Arbeitsblatt_17_ACT_Werteklaerung.pdf?rlkey=261xj7vrmlvfvx9i5wzysfu6q&st=bzmg3ixl&raw=1" 
+                        width="100%" 
+                        height="100%" 
+                        frameborder="0" 
+                        allowfullscreen="" 
+                        title="Arbeitsblatt 17 Vorschau"
+                        class="rounded-lg shadow-md"
+                        style="border: 1px solid #ccc;"
+                    >
+                        <p class="text-sm text-gray-500 p-4">Ihr Browser unterstützt iFrames nicht. 
+                            <a href="https://www.dropbox.com/scl/fi/gi2ra8i0ekkhtvlz30ref/Arbeitsblatt_17_ACT_Werteklaerung.pdf?rlkey=261xj7vrmlvfvx9i5wzysfu6q&st=bzmg3ixl&dl=0" target="_blank" class="text-blue-500 hover:underline">Hier PDF direkt öffnen oder herunterladen.</a>
+                        </p>
+                    </iframe>
+                </div>
+            </div>
+                  <div class="mt-6 border-t pt-4 border-gray-200">
+                <h4 class="text-lg font-semibold mb-3 text-blue-700">▶️ Arbeitsblatt 18: Engagiertes Handeln (PDF)</h4>
+                <div class="w-full" style="height: 500px;">
+                    <iframe 
+                        src="https://www.dropbox.com/scl/fi/fzce53mqz0ax1mmviz9vw/Arbeitsblatt_18_ACT_Engagiertes_Handeln.pdf?rlkey=yy3x1yek1knthxcgg3gj3pz24&st=yfijwemt&raw=1" 
+                        width="100%" 
+                        height="100%" 
+                        frameborder="0" 
+                        allowfullscreen="" 
+                        title="Arbeitsblatt 17 Vorschau"
+                        class="rounded-lg shadow-md"
+                        style="border: 1px solid #ccc;"
+                    >
+                        <p class="text-sm text-gray-500 p-4">Ihr Browser unterstützt iFrames nicht. 
+                            <a href="https://www.dropbox.com/scl/fi/fzce53mqz0ax1mmviz9vw/Arbeitsblatt_18_ACT_Engagiertes_Handeln.pdf?rlkey=yy3x1yek1knthxcgg3gj3pz24&st=yfijwemt&dl=0" target="_blank" class="text-blue-500 hover:underline">Hier PDF direkt öffnen oder herunterladen.</a>
+                        </p>
+                    </iframe>
+                </div>
+            </div>
+            
+        </details>
+    </section>
+
+    <section id="abschnitt-5" class="mb-6">
+        <details class="bg-act-5 p-6 rounded-xl shadow">
+            <summary>5. Anwendung: Der Hexaflex in der Praxis (Zusammenfassung)</summary>
+
+            <div class="text-gray-700 text-base leading-snug space-y-4 mt-4">
+                <p>Die ACT ist ein sehr flexibles Modell. In der Praxis geht es darum, bei einem Problemverhalten schnell zu erkennen, welche der sechs Prozesse am wenigsten ausgeprägt ist und dort anzusetzen.</p>
+                
+                <p><b style="font-size: 1rem; font-family: inherit;">ACT: Fragen in der therapeutischen Praxis</b></p>
+                <ul class="list-disc list-inside ml-4 space-y-2">
+                    <li><b>Gegenwartskontakt:</b> "Was bemerken Sie gerade in Ihrem Körper/im Raum?" (Achtsamkeit)</li>
+                    <li><b>Defusion:</b> "Welche Geschichte erzählt Ihr Kopf Ihnen gerade?" (Distanz zum Gedanken)</li>
+                    <li><b>Akzeptanz:</b> "Sind Sie bereit, dieses Gefühl für X Minuten bei sich zu haben, um das zu tun, was Ihnen wichtig ist?" (Bereitschaft)</li>
+                    <li><b>Werte:</b> "Was würde Ihnen in dieser Situation am meisten am Herzen liegen?" (Richtung)</li>
+                    <li><b>Engagiertes Handeln:</b> "Was wäre der kleinste, konkrete Schritt, den Sie jetzt in Richtung Ihres Wertes gehen könnten?" (Commitment)</li>
+                </ul>
+                
+                <p><b style="font-size: 1rem; font-family: inherit;">Integration in die Verhaltenstherapie</b></p>
+                <p>ACT erweitert die klassische VT. Während die Exposition in der klassischen VT das Ziel hat, die Angst zu <b>reduzieren</b>, hat die Exposition in der ACT das Ziel, <b>wertegeleitet zu handeln</b> – trotz der vorhandenen Angst. Dies verlagert den Fokus vom Kämpfen zum Leben.</p>
+            </div>
+
+            <div class="bg-blue-50 border-l-4 border-blue-400 p-4 rounded shadow-sm text-sm text-blue-900 mt-4">
+                <p class="font-semibold mb-1">✅ Zusammenfassende Aufgabe:</p>
+                <p class="mb-2">Überlegen Sie sich eine Situation in Ihrem Leben, in der Sie Erlebnisvermeidung betreiben (z. B. Prokrastination, Vermeidung von Konflikten). Gehen Sie die sechs Prozesse des Hexaflex durch und überlegen Sie, welche Intervention (Defusion, Werteklärung etc.) Ihnen am meisten helfen würde, um wertegeleitet zu handeln.</p>
+            </div>
+        </details>
+    </section>
+    
+    
+    <div class="bg-green-50 border-l-4 border-green-400 p-6 rounded-xl shadow mb-12">
+        <h2 class="text-xl font-semibold text-green-700 mb-2">Die Grundlagen der ACT</h2>
+        <p class="text-gray-700 mb-4">
+            Herzlichen Glückwunsch! Sie haben den gesamten Kurs abgeschlossen und den Grundstein gelegt für ein besseres Leben. Versuchen Sie nun die Konzepte der psychologischen Flexibilität in die Praxis umzusetzen! Viel Erfolg!
+        </p>
+        
+        <div class="flex justify-end space-x-4">
+            
+            <a href="4-verhaltensanalyse.html" class="inline-block bg-gray-500 hover:bg-gray-600 text-white font-semibold px-6 py-3 rounded-lg shadow transition duration-300 flex items-center">
+                &larr; Zurück zur Verhaltensanalyse
+            </a>
+        </div>
+    </div>
+</div>
+<footer class="mt-16 py-8 bg-gray-100 border-t border-gray-200">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-center space-x-8">
+        
+        <a href="impressum.html" 
+           class="text-sm font-medium text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out underline">
+            Impressum
+        </a>
+
+        <a href="datenschutz.html" 
+           class="text-sm font-medium text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out underline">
+            Datenschutzerklärung
+        </a>
+
+    </div>
+</footer>
+</body>
+</html>
