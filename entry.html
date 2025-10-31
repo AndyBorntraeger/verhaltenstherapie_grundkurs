@@ -7,18 +7,26 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f9;
+            
+            /* --- NEUE HINTERGRUND-DEFINITION --- */
+            background-image: url('https://www.dropbox.com/scl/fi/wg70y5rrw48qgfrrka52n/sandstein.jpg?rlkey=sgdgrpee94hx4mih13r412urk&st=dzqu3ns8&raw=1');
+            background-size: cover;          /* Stellt sicher, dass das Bild den gesamten Bereich abdeckt */
+            background-position: center center; /* Zentriert das Bild */
+            background-attachment: fixed;    /* Sorgt dafür, dass das Bild beim Scrollen fixiert bleibt (optional) */
+            
+            /* Der Rest bleibt wie gehabt */
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
             margin: 0;
+            background-color: #f4f4f9; /* Fallback-Farbe, falls das Bild nicht lädt */
         }
         .login-container {
-            background-color: #ffffff;
+            background-color: rgba(255, 255, 255, 0.95); /* Leicht transparent für bessere Lesbarkeit */
             padding: 30px;
             border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Etwas stärkerer Schatten */
             width: 100%;
             max-width: 400px;
             text-align: center;
@@ -42,10 +50,10 @@
             padding: 10px;
             border: 1px solid #ccc;
             border-radius: 4px;
-            box-sizing: border-box; /* Stellt sicher, dass Padding und Border in der Breite enthalten sind */
+            box-sizing: border-box;
         }
         button {
-            background-color: #4CAF50; /* Grün */
+            background-color: #4CAF50; 
             color: white;
             padding: 10px 15px;
             border: none;
@@ -54,22 +62,27 @@
             font-size: 16px;
             width: 100%;
             margin-top: 10px;
+            transition: background-color 0.3s;
         }
-        button:hover {
+        button:hover:not(:disabled) {
             background-color: #45a049;
         }
+        button:disabled {
+            background-color: #cccccc; 
+            cursor: not-allowed;
+        }
         .error-message {
-            color: #e74c3c; /* Rot */
+            color: #e74c3c; 
             margin-top: 15px;
             font-weight: bold;
-            display: none; /* Am Anfang versteckt */
+            display: none; 
         }
     </style>
 </head>
 <body>
 
 <div class="login-container">
-    <h2>🔑 Zugang zum Stresskurs</h2>
+    <h2>🔑 Zugang zum Grundkurs Verhaltenstherapie</h2>
     <p>Bitte geben Sie Ihren Nutzeraccount und Ihr Passwort ein.</p>
 
     <div class="input-group">
@@ -82,35 +95,65 @@
         <input type="password" id="password" name="password" required>
     </div>
 
-    <button onclick="checkLogin()">Login</button>
+    <button id="loginButton" onclick="checkLogin()">Login</button>
 
     <p id="errorMessage" class="error-message">
-        Falscher Nutzeraccount oder falsches Passwort. Bitte versuchen Sie es erneut.
+        Falscher Nutzeraccount oder falsches Passwort.
     </p>
 </div>
 
 <script>
-    function checkLogin() {
-        // HIER die korrekten Zugangsdaten festlegen
-        const correctUsername = "kursnutzer";
-        const correctPassword = "stressfrei2025";
-        const targetPage = "1-einfuehrung.html"; // Die Seite, zu der weitergeleitet werden soll
+    // JavaScript (Login- und Sperrlogik) bleibt unverändert vom letzten Schritt
+    let failedAttempts = 0;
+    const LOCKOUT_BASE_SECONDS = 2; 
+    const LOCKOUT_MAX_SECONDS = 60; 
+    let lockedUntil = 0; 
+    const correctUsername = "kursnutzer";
+    const correctPassword = "§S52!iJ3&sKlp1§";
+    const targetPage = "einfuehrung/"; 
 
-        // Werte aus den Eingabefeldern holen
-        const enteredUsername = document.getElementById("username").value;
-        const enteredPassword = document.getElementById("password").value;
+    function initiateLockout() {
+        const errorElement = document.getElementById("errorMessage");
+        const loginButton = document.getElementById("loginButton");
+        let currentLockoutSeconds = LOCKOUT_BASE_SECONDS * Math.pow(2, failedAttempts - 1);
+        currentLockoutSeconds = Math.min(currentLockoutSeconds, LOCKOUT_MAX_SECONDS); 
+
+        lockedUntil = Date.now() + currentLockoutSeconds * 1000;
+        loginButton.disabled = true;
+        errorElement.style.display = 'block';
+
+        const countdown = setInterval(() => {
+            const remainingTimeMs = lockedUntil - Date.now();
+            const remainingSeconds = Math.ceil(remainingTimeMs / 1000);
+
+            if (remainingTimeMs <= 0) {
+                clearInterval(countdown);
+                loginButton.disabled = false;
+                errorElement.innerHTML = 'Falscher Nutzeraccount oder falsches Passwort. Bitte versuchen Sie es erneut.';
+            } else {
+                errorElement.innerHTML = `Zu viele Fehlversuche. Bitte warten Sie **${remainingSeconds}** Sekunden.`;
+            }
+        }, 1000);
+    }
+
+    function checkLogin() {
         const errorElement = document.getElementById("errorMessage");
 
-        // Überprüfung der Zugangsdaten
+        if (Date.now() < lockedUntil) {
+            return; 
+        }
+
+        const enteredUsername = document.getElementById("username").value;
+        const enteredPassword = document.getElementById("password").value;
+
         if (enteredUsername === correctUsername && enteredPassword === correctPassword) {
-            // Erfolg: Fehlermeldung ausblenden und weiterleiten
+            failedAttempts = 0;
             errorElement.style.display = 'none';
             window.location.href = targetPage;
         } else {
-            // Fehler: Fehlermeldung anzeigen
-            errorElement.style.display = 'block';
-            // Optional: Eingabefelder leeren
+            failedAttempts++;
             document.getElementById("password").value = ''; 
+            initiateLockout();
         }
     }
 </script>
