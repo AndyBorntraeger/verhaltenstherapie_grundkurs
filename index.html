@@ -1,1 +1,167 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zugang zum Stresskurs</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            
+            /* --- NEUE HINTERGRUND-DEFINITION --- */
+            background-image: url('https://www.dropbox.com/scl/fi/8lmb2lbp9ro7bbzcob4bg/sandstein1.jpg?rlkey=j2gtygi9mi259xv3e9wf9kk56&st=a3hzuepx&raw=1');
+            background-size: cover;          /* Stellt sicher, dass das Bild den gesamten Bereich abdeckt */
+            background-position: center center; /* Zentriert das Bild */
+            background-attachment: fixed;    /* Sorgt dafür, dass das Bild beim Scrollen fixiert bleibt (optional) */
+            
+            /* Der Rest bleibt wie gehabt */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f9; /* Fallback-Farbe, falls das Bild nicht lädt */
+        }
+        .login-container {
+            background-color: rgba(255, 255, 255, 0.95); /* Leicht transparent für bessere Lesbarkeit */
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Etwas stärkerer Schatten */
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+        h2 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .input-group {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+        .input-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #555;
+        }
+        .input-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #4CAF50; 
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+            margin-top: 10px;
+            transition: background-color 0.3s;
+        }
+        button:hover:not(:disabled) {
+            background-color: #45a049;
+        }
+        button:disabled {
+            background-color: #cccccc; 
+            cursor: not-allowed;
+        }
+        .error-message {
+            color: #e74c3c; 
+            margin-top: 15px;
+            font-weight: bold;
+            display: none; 
+        }
+    </style>
+</head>
+<body>
+
+<div class="login-container">
+    <h2>🔑 Zugang zum Grundkurs Verhaltenstherapie</h2>
+    <p>Bitte geben Sie Ihren Nutzeraccount und Ihr Passwort ein.</p>
+
+    <div class="input-group">
+        <label for="username">Nutzeraccount</label>
+        <input type="text" id="username" name="username" required>
+    </div>
+
+    <div class="input-group">
+        <label for="password">Passwort</label>
+        <input type="password" id="password" name="password" required>
+    </div>
+
+    <button id="loginButton" onclick="checkLogin()">Login</button>
+
+    <p id="errorMessage" class="error-message">
+        Falscher Nutzeraccount oder falsches Passwort.
+    </p>
+</div>
+
+<script>
+    // JavaScript (Login- und Sperrlogik) bleibt unverändert vom letzten Schritt
+    let failedAttempts = 0;
+    const LOCKOUT_BASE_SECONDS = 2; 
+    const LOCKOUT_MAX_SECONDS = 60; 
+    let lockedUntil = 0; 
+    const correctUsername = "kursnutzer";
+    const correctPassword = "§S52!iJ3&sKlp1§";
+    const targetPage = "index.html"; 
+
+    function initiateLockout() {
+        const errorElement = document.getElementById("errorMessage");
+        const loginButton = document.getElementById("loginButton");
+        let currentLockoutSeconds = LOCKOUT_BASE_SECONDS * Math.pow(2, failedAttempts - 1);
+        currentLockoutSeconds = Math.min(currentLockoutSeconds, LOCKOUT_MAX_SECONDS); 
+
+        lockedUntil = Date.now() + currentLockoutSeconds * 1000;
+        loginButton.disabled = true;
+        errorElement.style.display = 'block';
+
+        const countdown = setInterval(() => {
+            const remainingTimeMs = lockedUntil - Date.now();
+            const remainingSeconds = Math.ceil(remainingTimeMs / 1000);
+
+            if (remainingTimeMs <= 0) {
+                clearInterval(countdown);
+                loginButton.disabled = false;
+                errorElement.innerHTML = 'Falscher Nutzeraccount oder falsches Passwort. Bitte versuchen Sie es erneut.';
+            } else {
+                errorElement.innerHTML = `Zu viele Fehlversuche. Bitte warten Sie **${remainingSeconds}** Sekunden.`;
+            }
+        }, 1000);
+    }
+
+    function checkLogin() {
+        const errorElement = document.getElementById("errorMessage");
+
+        if (Date.now() < lockedUntil) {
+            return; 
+        }
+
+        const enteredUsername = document.getElementById("username").value;
+        const enteredPassword = document.getElementById("password").value;
+
+        if (enteredUsername === correctUsername && enteredPassword === correctPassword) {
+            failedAttempts = 0;
+            errorElement.style.display = 'none';
+            window.location.href = targetPage;
+        } else {
+            failedAttempts++;
+            document.getElementById("password").value = ''; 
+            initiateLockout();
+        }
+    }
+</script>
+
+</body>
+</html>
+
+
+
+
 
